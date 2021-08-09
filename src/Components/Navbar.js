@@ -50,21 +50,15 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li>
                 <a className="nav-links" onClick={closeMobileMenu} href="#gallery_album">
-                    Gallery
+                    Glories
                 </a>
             </li>
-            
-
             <li>
-              <Link
-                to='/signup'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                About Us
-              </Link>
+                <a className="nav-links" onClick={closeMobileMenu} href="#contact_us">
+                    Contact Us
+                </a>
             </li>
           </ul>
         </div>
