@@ -18,14 +18,14 @@ export default function Slider() {
         }
     }
 
-        // const autoSlide = () =>{
-        //     if(slideIndex !== dataSlider.length){
-        //         setSlideIndex(slideIndex + 1)
-        //     } 
-        //     else if (slideIndex === dataSlider.length){
-        //         setSlideIndex(1)
-        //     }
-        // }
+    const autoSlide = () =>{
+        if(slideIndex !== dataSlider.length){
+            setSlideIndex(slideIndex + 1)
+        } 
+        else if (slideIndex === dataSlider.length){
+            setSlideIndex(1)
+        }
+    }
 
     const prevSlide = () => {
         if(slideIndex !== 1){
@@ -40,9 +40,9 @@ export default function Slider() {
         setSlideIndex(index)
     }
 
-    // setInterval(() => {
-    //     autoSlide()
-    // }, 3000);
+    setTimeout(() => {
+        autoSlide()
+    }, 3000);
 
     return (
         <>
