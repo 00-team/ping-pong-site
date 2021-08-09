@@ -1,17 +1,24 @@
 // react
-import React from 'react'
-import { Route, Router, Switch } from 'react-router'
+import React from 'react';
+import { BrowserRouter as Router, Route , Switch } from 'react-router-dom';
 
 // pages
-import Home from './Pages/Home'
+import Home from './Pages/Home';
 
 // components
-import Navbar from './Components/Navbar'
-import Footer from './Components/Footer'
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function App() {
   return (
-          <Home />
+      <Router>
+            <Navbar  />
+            <Switch>
+                <Route path="/" exact> <Home   /> </Route>
+
+            </Switch>
+            <Footer />
+      </Router>
   )
 }
 
