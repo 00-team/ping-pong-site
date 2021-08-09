@@ -7,6 +7,8 @@ export default function Slider() {
 
     const [slideIndex, setSlideIndex] = useState(1)
 
+    
+
     const nextSlide = () => {
         if(slideIndex !== dataSlider.length){
             setSlideIndex(slideIndex + 1)
@@ -15,6 +17,15 @@ export default function Slider() {
             setSlideIndex(1)
         }
     }
+
+        // const autoSlide = () =>{
+        //     if(slideIndex !== dataSlider.length){
+        //         setSlideIndex(slideIndex + 1)
+        //     } 
+        //     else if (slideIndex === dataSlider.length){
+        //         setSlideIndex(1)
+        //     }
+        // }
 
     const prevSlide = () => {
         if(slideIndex !== 1){
@@ -28,6 +39,10 @@ export default function Slider() {
     const moveDot = index => {
         setSlideIndex(index)
     }
+
+    // setInterval(() => {
+    //     autoSlide()
+    // }, 3000);
 
     return (
         <>
