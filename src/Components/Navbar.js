@@ -21,6 +21,10 @@ function Navbar() {
       setButton(true);
     }
   };
+
+  useEffect(() => {
+      console.log(click)
+  }, [click])
   
 
   useEffect(() => {
@@ -38,7 +42,7 @@ function Navbar() {
             <FaTypo3 />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? <FaTimes /> : <FaBars />} />
+            {click ? <FaTimes /> : <FaBars />}
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
