@@ -35,9 +35,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/template.html',
+            template: './src/static/template.html',
             inject: true,
-            favicon: './src/img/favicon.ico',
+            favicon: './src/static/img/favicon.ico',
             publicPath: '/',
             templateParameters: {
                 SiteName: 'Ping Pong'
