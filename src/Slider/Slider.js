@@ -1,7 +1,11 @@
-import React, {useState} from 'react'
-import './Slider.css'
+import React, {useEffect, useState} from 'react'
+
+// components
 import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider'
+
+// css
+import './Slider.css'
 
 export default function Slider() {
 
@@ -10,15 +14,6 @@ export default function Slider() {
     
 
     const nextSlide = () => {
-        if(slideIndex !== dataSlider.length){
-            setSlideIndex(slideIndex + 1)
-        } 
-        else if (slideIndex === dataSlider.length){
-            setSlideIndex(1)
-        }
-    }
-
-    const autoSlide = () =>{
         if(slideIndex !== dataSlider.length){
             setSlideIndex(slideIndex + 1)
         } 
@@ -40,9 +35,7 @@ export default function Slider() {
         setSlideIndex(index)
     }
 
-    setTimeout(() => {
-        autoSlide()
-    }, 3000);
+    
 
     return (
         <>
