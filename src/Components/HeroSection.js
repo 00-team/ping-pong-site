@@ -9,9 +9,14 @@ import "./HeroSection.css"
 
 function HeroSection() {
     return (
-        <div className="heroSection">
-            <Slider/>
-        </div>
+        <>
+            <section className="heroSection">
+                <Slider/>
+            </section>
+            <section className="glories">
+                
+            </section>
+        </>
     )
 }
 
