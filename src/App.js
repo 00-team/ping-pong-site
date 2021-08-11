@@ -9,12 +9,16 @@ import Navbar from './components/layouts/Navbar';
 import Footer from './components/layouts/Footer';
 import Home from './components/pages/Home';
 
+// cursor
+import Cursor from './components/features/cursor';
+
 // style
 import './components/sass/base.scss'
 
 const App = () => {
     return (
         <>
+            <Cursor />
             <Navbar  />
             <Switch>
                 <Route path="/" exact> <Home /> </Route>
