@@ -1,0 +1,14 @@
+[
+    {
+        "name": "en",
+        "displayName": "English",
+        "direction": "ltr",
+        "text": {}
+    },
+    {
+        "name": "fa",
+        "displayName": "Persian",
+        "direction": "rtl",
+        "text": {}
+    }
+]
