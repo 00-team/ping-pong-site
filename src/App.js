@@ -9,8 +9,8 @@ import { Provider as ReduxProvider, useDispatch, useSelector } from 'react-redux
 import store from './database/store';
 
 // components
-import Home from './components/pages/Home';
 import Navbar from './components/layouts/Navbar';
+import About from './components/layouts/About';
 
 // style
 import './components/sass/base.scss'
@@ -25,9 +25,7 @@ const App = () => {
     return (
         <Router>
             <Navbar />
-            <Switch>
-                <Route path="/" exact component={Home} />
-            </Switch>
+            <About />
         </Router>
     )
 }
