@@ -11,6 +11,7 @@ import store from './database/store';
 // components
 import Navbar from './components/layouts/Navbar';
 import About from './components/layouts/About';
+import ImgSlider from './components/layouts/ImgSlider';
 
 // style
 import './components/sass/base.scss'
@@ -25,6 +26,7 @@ const App = () => {
     return (
         <Router>
             <Navbar />
+            <ImgSlider />
             <About />
         </Router>
     )
