@@ -1,9 +1,12 @@
 import React from 'react'
 
+// components
+import ImgSlider from '../layouts/ImgSlider'
+
 function Home() {
     return (
-        <div>
-            Home
+        <div className="home">
+                <ImgSlider />
         </div>
     )
 }
