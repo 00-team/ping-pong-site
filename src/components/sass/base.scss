@@ -1,47 +1,55 @@
-html,body{
-    scroll-behavior: smooth;
-  }
-  * {
-    box-sizing: border-box;
+// fonts
+@import './fonts.scss';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Georama&display=swap'); // font-family: 'Caveat', cursive;
+
+@font-face {
+	font-family: "Vazir";
+	src: url("./fonts/Vazir/Vazir.eot") format("eot"),
+		 url("./fonts/Vazir/Vazir.woff2") format("woff2"),
+		 url("./fonts/Vazir/Vazir.woff") format("woff"),
+		 url("./fonts/Vazir/Vazir.ttf") format("truetype");
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
-  }
-  
-  .home,
-  .services,
-  .products,
-  .sign-up {
-    display: flex;
-    height: 90vh;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-  }
-  
-  .services {
-    /* background-image: url('/images/img-2.jpg'); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  }
-  
-  .products {
-    /* background-image: url('/images/img-1.jpg'); */
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  }
-  
-  .sign-up {
-    /* background-image: url('/images/img-8.jpg'); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  }
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::selection {
+        background-color: #FFF;
+        color: #1771F1;
+    }
+}
+
+body {
+    background-color: #1771F1;
+    border: 5px solid #FFF;
+    width: 100%;
+    height: 500vh;
+    position: relative;
+    @include Caveat(40px);
+
+    &::before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        background-color: #FFF;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(50%,0);
+    }
+}
+

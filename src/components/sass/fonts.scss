@@ -1,0 +1,9 @@
+@mixin Caveat($Size: 16px) {
+    font-family: 'Caveat', 'Vazir', cursive;
+    font-size: $Size;
+}
+
+@mixin Georama($Size: 16px) {
+    font-family: 'Georama', 'Vazir', sans-serif;
+    font-size: $Size;
+}
