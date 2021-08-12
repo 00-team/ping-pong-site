@@ -1,18 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// router
-import { BrowserRouter as Router, Route , Switch } from 'react-router-dom';
+// redux
+import { Provider as ReduxProvider, useDispatch, useSelector } from 'react-redux';
+import store from './database/store';
 
 // components
+import Navbar from './components/layouts/Navbar';
 
 // style
 import './components/sass/base.scss'
 
 const App = () => {
+    const dispatch = useDispatch()
+    const currentLocale = useSelector(state => state.Locale.locale)
+    
+    console.log(currentLocale);
+
+    
     return (
         <>
-            About Works Contact 
+            <Navbar />
         </>
     )
 }
@@ -22,9 +30,9 @@ export default App
 
 const Root = () => {
     return (
-        <Router>
+        <ReduxProvider store={store}>
             <App/>
-        </Router>
+        </ReduxProvider>
     )
 }
 

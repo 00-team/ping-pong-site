@@ -1,14 +1,26 @@
 [
     {
-        "name": "en",
+        "locale": "en",
         "displayName": "English",
         "direction": "ltr",
-        "text": {}
+        "text": {
+            "navbar": {
+                "about": "ABOUT",
+                "awards": "AWARDS",
+                "contact": "CONTACT"
+            }
+        }
     },
     {
-        "name": "fa",
+        "locale": "fa",
         "displayName": "Persian",
         "direction": "rtl",
-        "text": {}
+        "text": {
+            "navbar": {
+                "about": "درباره",
+                "awards": "جوایز",
+                "contact": "ارتباط"
+            }
+        }
     }
 ]
