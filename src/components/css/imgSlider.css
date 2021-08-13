@@ -2,7 +2,7 @@
 .swiper-container {
   width: 70vh;
   height: 40vh;
-
+  overflow: visible !important;
   margin: 50px 0 50px 0;
 }
 

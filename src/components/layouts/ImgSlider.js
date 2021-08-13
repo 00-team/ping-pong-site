@@ -32,7 +32,7 @@ const ImgSlider = () => {
   
   return (
     <>    
-        <Swiper spaceBetween={30} centeredSlides={true} autoplay={{"delay": 2500,"disableOnInteraction": false}} pagination={{"clickable": true}} navigation={true} className="mySwiper">
+        <Swiper effect={'coverflow'} spaceBetween={30} centeredSlides={true} autoplay={{"delay": 2500,"disableOnInteraction": false}} pagination={{"clickable": true}} navigation={true} className="mySwiper">
             {images.map((item) =>
                 <SwiperSlide><img src={item.url} /></SwiperSlide>
             )}
