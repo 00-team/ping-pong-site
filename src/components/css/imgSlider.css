@@ -2,8 +2,9 @@
 .swiper-container {
   width: 70vh;
   height: 40vh;
-
-  margin: 50px 0 50px 0;
+  overflow: visible;
+  margin: 50px auto;
+  user-select: none;
 }
 
 .swiper-slide {

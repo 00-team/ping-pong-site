@@ -1,45 +1,58 @@
 // react 
 import React from "react";
 
-// components 
-import "../css/imgSlider.css"
 
-// Import Swiper React components
+// Swiper 
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+    Autoplay, Pagination, Navigation, EffectCoverflow
+} from 'swiper/core';
 
-// Import Swiper styles
+SwiperCore.use([Autoplay, Pagination, Navigation, EffectCoverflow]);
+
+
+// style 
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
+import "../css/imgSlider.css"
 
+import image1 from '../../static/img/img-1.jpg'
+import image2 from '../../static/img/img-2.jpg'
+import image8 from '../../static/img/img-8.jpg'
 
-
-// import Swiper core and required modules
-import SwiperCore, {
-  Autoplay,Pagination,Navigation,EffectCoverflow
-} from 'swiper/core';
-
-// install Swiper modules
-SwiperCore.use([Autoplay,Pagination,Navigation,EffectCoverflow]);
+console.log(image8);
 
 const images = [
-    { url : "https://cdn.discordapp.com/attachments/780443920571432970/874335024084832296/InUZKu.png", id: 1},
-    { url : "https://cdn.discordapp.com/attachments/780443920571432970/874335007571849276/myLogo.png", id: 2},
-    { url : "../../static/img/img-3.jpg", id: 3},
+    { img: image1, id: 1 },
+    { img: image2, id: 2 },
+    { img: image8, id: 3 },
 ]
 
-const ImgSlider = () => { 
-  
-  return (
-    <>    
-        <Swiper spaceBetween={30} centeredSlides={true} autoplay={{"delay": 2500,"disableOnInteraction": false}} pagination={{"clickable": true}} navigation={true} className="mySwiper">
-            {images.map((item) =>
-                <SwiperSlide><img src={item.url} /></SwiperSlide>
+const ImgSlider = () => {
+    return (<>
+        <Swiper 
+            effect='coverflow'
+            loop={true}
+            spaceBetween={30} 
+            centeredSlides={true} 
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false
+            }} 
+            pagination={{
+                clickable: true
+            }} 
+            navigation={true} 
+            className="mySwiper"
+        >
+            {images.map((item, index) =>
+                <SwiperSlide key={index}>
+                    <img src={item.img} />
+                </SwiperSlide>
             )}
         </Swiper>
-    </>
-  )
-
+    </>)
 }
 
 export default ImgSlider;
