@@ -8,8 +8,8 @@ import Contact from '../layouts/Contact'
 function Home() {
     return (
         <div className="home">
-                <ImgSlider />
-                <About />
+            <ImgSlider />
+            <About />
             <Contact />
         </div>
     )
