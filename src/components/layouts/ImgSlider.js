@@ -21,7 +21,6 @@ import image1 from '../../static/img/img-1.jpg'
 import image2 from '../../static/img/img-2.jpg'
 import image8 from '../../static/img/img-8.jpg'
 
-console.log(image8);
 
 const images = [
     { img: image1, id: 1 },

@@ -62,7 +62,7 @@ function Navbar() {
             <GiPingPongBat />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? <FaTimes /> : <FaBars/>} />
+            { click ? <FaTimes /> : <FaBars/> }
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             
@@ -78,7 +78,7 @@ function Navbar() {
                 </a>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 to='/signup'
                 className='nav-links-mobile'
@@ -86,7 +86,7 @@ function Navbar() {
               >
                 About Us
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
