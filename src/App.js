@@ -1,16 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// router 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 // redux
 import { Provider as ReduxProvider, useDispatch, useSelector } from 'react-redux';
 import store from './database/store';
 
 // components
-import Home from './components/pages/Home';
-import Navbar from './components/layouts/Navbar';
 
 
 // style
@@ -24,12 +19,7 @@ const App = () => {
 
     
     return (
-        <Router>
-            <Navbar />
-            <Switch>
-                <Route path="/" component={Home} />               
-            </Switch>
-        </Router>
+        <>App</>
     )
 }
 

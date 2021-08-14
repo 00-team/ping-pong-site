@@ -1,7 +1,7 @@
 import { CHANGE_LOCALE } from './types'
 
 // all locales
-import data from '../../../locale.json'
+import data from '../../locale.json'
 
 const AllowdLocales = data.map(d => d.locale)
 
