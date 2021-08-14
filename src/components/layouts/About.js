@@ -12,13 +12,14 @@ import './sass/about.scss'
 // glories 
 import Glories from './Glories'
 
-// imgs 
-import image1 from '../../static/img/img-1.jpg'
-import image2 from '../../static/img/img-2.jpg'
-import image8 from '../../static/img/img-8.jpg'
 
-import glori1 from '../../static/img/download.jpg'
-import glori2 from '../../static/img/images.jpg'
+// lower imgs 
+import lower1 from '../../static/img/lower-1.jpg'
+import lower2 from '../../static/img/lower-2.jpg'
+import lower3 from '../../static/img/lower-3.jpg'
+import lower4 from '../../static/img/lower-4.jpg'
+import lower5 from '../../static/img/lower-5.jpg'
+import lower6 from '../../static/img/lower-6.jpg'
 
 const About = () => {
     const currentLocale = useSelector(state => state.Locale.locale)
@@ -34,32 +35,66 @@ const About = () => {
     }, [currentLocale])
 
     return (
-        <>
+        <div className="about">
+            
             <div className='cards'>
                 <h1 id="glories">Glories</h1>
                 <div className='cards__container'>
                     <div className='cards__wrapper'>
                         <ul className='cards__items'>
-
                             <Glories
-                            src={glori1}
+                            src={lower1}
                             text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='Solo'
+                            label='2005'
                             path='/'
                             />
 
                             <Glories
-                            src={glori2}
+                            src={lower2}
                             text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='Team'
+                            label='2001'
                             path='/'
                             />
+                        
+                                    
+                        </ul>
+                        <ul className='cards__items' id="grid">
+
+                            <Glories
+                            src={lower3}
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='2018'
+                            path='/'
+                            />
+
+                            <Glories
+                            src={lower4}
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='2018'
+                            path='/'
+                            />
+
+                            <Glories
+                            src={lower5}
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='1980'
+                            path='/'
+                            />
+
+                            <Glories
+                            src={lower6}
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='2015'
+                            path='/'
+                            />
+                            
                                     
                         </ul>
                     </div>
                 </div>
             </div>
-        </>
+
+        </div>
     )
 }
 
