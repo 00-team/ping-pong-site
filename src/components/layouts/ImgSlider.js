@@ -17,15 +17,15 @@ import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
 import "../css/imgSlider.css"
 
-import image1 from '../../static/img/img-1.jpg'
-import image2 from '../../static/img/img-2.jpg'
-import image8 from '../../static/img/img-8.jpg'
+// top imgs 
+import top1 from '../../static/img/top-1.jpg'
+import top2 from '../../static/img/top-2.jpg'
 
 
 const images = [
-    { img: image1, id: 1 },
-    { img: image2, id: 2 },
-    { img: image8, id: 3 },
+    { img: top1, id: 1 },
+    { img: top2, id: 2 },
+    { img: top1, id: 3 },
 ]
 
 const ImgSlider = () => {
