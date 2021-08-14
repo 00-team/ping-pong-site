@@ -9,6 +9,17 @@ import locales from '../../locale.json'
 // style
 import './sass/about.scss'
 
+// glories 
+import Glories from './Glories'
+
+// imgs 
+import image1 from '../../static/img/img-1.jpg'
+import image2 from '../../static/img/img-2.jpg'
+import image8 from '../../static/img/img-8.jpg'
+
+import glori1 from '../../static/img/download.jpg'
+import glori2 from '../../static/img/images.jpg'
+
 const About = () => {
     const currentLocale = useSelector(state => state.Locale.locale)
     const [Locale, setLocale] = useState(null)
@@ -23,18 +34,33 @@ const About = () => {
     }, [currentLocale])
 
     return (
-        <div className='about-container'>
-            <div className='about' style={Locale ? { direction: Locale.direction } : {}}>
-                <div className='profile-picture'></div>
-                <div className='bio'>
-                {Locale && <>
-                    <span>{Locale.name}</span>
-                    <p>{Locale.bio}</p>
-                </>}
+        <>
+            <div className='cards'>
+                <h1 id="glories">Glories</h1>
+                <div className='cards__container'>
+                    <div className='cards__wrapper'>
+                        <ul className='cards__items'>
+
+                            <Glories
+                            src={glori1}
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='Solo'
+                            path='/'
+                            />
+
+                            <Glories
+                            src={glori2}
+                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+                            label='Team'
+                            path='/'
+                            />
+                                    
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
-export default About
+export default About;
