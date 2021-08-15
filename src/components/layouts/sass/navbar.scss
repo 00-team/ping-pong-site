@@ -1,0 +1,106 @@
+@use '../../sass/variables.sass' as *;
+@use '../../sass/mixins.sass';
+@use '../../sass/fonts.scss';
+
+.navbar-container {
+    @include mixins.box(100%, $NAVBAR_HEIGHT);
+    user-select: none;
+    background-color: #000;
+
+    .navbar {
+        @include mixins.box(100%, $NAVBAR_HEIGHT);
+        position: fixed;
+        z-index: 10;
+        background-color: #0007;
+        backdrop-filter: blur(10px);
+        color: #fff;
+        @include fonts.Caveat(30px);
+        text-transform: capitalize;
+        display: flex;
+        justify-content: center;
+
+        .navpart {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                cursor: pointer;
+                transition: all 200ms;
+                font-weight: 900;
+
+                &:hover {
+                    $c: #782fef;
+                    text-shadow: 0 1px 0 $c, 0 2px 0 $c, 0 3px 0 $c, 0 4px 0 $c,
+                        0 5px 0 $c;
+                }
+            }
+        }
+
+        .options {
+            .langs {
+                display: grid;
+                place-items: center;
+                margin-right: 20px;
+                position: relative;
+
+                svg {
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                .menu {
+                    $primary_color: #ff005c;
+                    background-color: #000;
+                    position: absolute;
+                    list-style: none;
+                    @include fonts.Georama(22px);
+                    top: 40px;
+                    right: 20px;
+                    transform: translateX(200px);
+                    border-top-left-radius: 9px;
+                    transition: all 500ms;
+                    box-shadow: 0 0 0 2px $primary_color;
+
+                    &.show {
+                        transform: translateX(0);
+                    }
+
+                    li {
+                        margin: 5px 0;
+                        padding: 0 10px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:hover::before {
+                            width: 90%;
+                        }
+
+                        &::before {
+                            content: '';
+                            width: 0;
+                            height: 100%;
+                            background-color: $primary_color;
+                            position: absolute;
+                            top: 0;
+                            left: 5px;
+                            transition: all 200ms;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
