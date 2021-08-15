@@ -1,0 +1,21 @@
+@use '../../sass/fonts';
+
+.button {
+    padding: 5px 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-top: none;
+    color: #fff;
+    margin: 300px auto;
+
+    body.ltr & {
+        border-right: none;
+    }
+
+    body.rtl & {
+        border-left: none;
+    }
+    
+    @include fonts.Caveat(20px);
+
+}
