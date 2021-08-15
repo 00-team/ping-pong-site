@@ -35,67 +35,66 @@ const About = () => {
     }, [currentLocale])
 
     return (
-        <div className="about">
-            
-            <div className='cards'>
-                <h1 id="glories">Glories</h1>
-                <div className='cards__container'>
-                    <div className='cards__wrapper'>
-                        <ul className='cards__items'>
-                            <Glories
-                            src={lower1}
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='2005'
-                            path='/'
-                            />
+      <div className="about">
+        <div className="cards">
+          <h1
+            className="fa center"
+            id="glories"
+            style={{ textAlign: "center" }}
+          >
+            افتخارات
+          </h1>
+          <div className="cards__container">
+            <div className="cards__wrapper">
+              <ul className="cards__items">
+                <Glories
+                  src={lower1}
+                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
+                  label="2005"
+                  path="/"
+                />
 
-                            <Glories
-                            src={lower2}
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='2001'
-                            path='/'
-                            />
-                        
-                                    
-                        </ul>
-                        <ul className='cards__items' id="grid">
+                <Glories
+                  src={lower2}
+                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
+                  label="2001"
+                  path="/"
+                />
+              </ul>
+              <ul className="cards__items" id="grid">
+                <Glories
+                  src={lower3}
+                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
+                  label="2018"
+                  path="/"
+                />
 
-                            <Glories
-                            src={lower3}
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='2018'
-                            path='/'
-                            />
+                <Glories
+                  src={lower4}
+                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
+                  label="2018"
+                  path="/"
+                />
 
-                            <Glories
-                            src={lower4}
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='2018'
-                            path='/'
-                            />
+                <Glories
+                  src={lower5}
+                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
+                  label="1980"
+                  path="/"
+                />
 
-                            <Glories
-                            src={lower5}
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='1980'
-                            path='/'
-                            />
-
-                            <Glories
-                            src={lower6}
-                            text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-                            label='2015'
-                            path='/'
-                            />
-                            
-                                    
-                        </ul>
-                    </div>
-                </div>
+                <Glories
+                  src={lower6}
+                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
+                  label="2015"
+                  path="/"
+                />
+              </ul>
             </div>
-
+          </div>
         </div>
-    )
+      </div>
+    );
 }
 
 export default About;
