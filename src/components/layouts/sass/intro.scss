@@ -1,0 +1,27 @@
+@use '../../sass/variables.sass' as *;
+@use '../../sass/fonts.scss';
+@use '../../sass/mixins.sass';
+
+.intro-container {
+    @include mixins.box(100%, calc(100vh - #{$NAVBAR_HEIGHT}));
+    @include mixins.bg('../../../static/img/intro.jpg', $position: top);
+    
+    color: #FFF;
+    @include fonts.Georama(30px);
+
+    .intro {
+        background-color: #0006;
+        padding: 300px 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        height: 100%;
+        position: relative;
+
+        span {
+            &.job {
+                font-size: 20px;
+            }
+        }
+    }
+}
