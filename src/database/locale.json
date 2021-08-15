@@ -8,6 +8,11 @@
                 "name": "Hi, im mr. Nobody",
                 "job": "im ping pong Master in tehran city, i played on 2019 and im best player ever, i win 10 time in olampic 😂",
                 "button": "About Me"
+            },
+            "navbar": {
+                "about": "About Me",
+                "glories": "My Glories",
+                "students": "My Students"
             }
         }
     },
@@ -20,6 +25,11 @@
                 "name": "سلام من اقای هیچکس هستم.",
                 "job": "مربی پینگ پنگ استان طهران. بازیکن برترسال فلان. قهرامان 10 دوره مسابقات کشوری. مدرس خصوصی و عمومی",
                 "button": "درباره من"
+            },
+            "navbar": {
+                "about": "درباره من",
+                "glories": "افتخارات من",
+                "students": "شاگردان من"
             }
         }
     }
