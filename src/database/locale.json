@@ -4,14 +4,10 @@
         "displayName": "English",
         "direction": "ltr",
         "text": {
-            "navbar": {
-                "about": "ABOUT",
-                "awards": "AWARDS",
-                "contact": "CONTACT"
-            },
-            "about": {
-                "name": "Random Dude",
-                "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            "intro": {
+                "name": "Hi, im mr. Nobody",
+                "job": "im ping pong Master in tehran city, i played on 2019 and im best player ever, i win 10 time in olampic 😂",
+                "button": "About Me"
             }
         }
     },
@@ -20,14 +16,10 @@
         "displayName": "Persian",
         "direction": "rtl",
         "text": {
-            "navbar": {
-                "about": "درباره",
-                "awards": "جوایز",
-                "contact": "ارتباط"
-            },
-            "about": {
-                "name": "رندوم دود",
-                "bio": "آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند"
+            "intro": {
+                "name": "سلام من اقای هیچکس هستم.",
+                "job": "مربی پینگ پنگ استان طهران. بازیکن برترسال فلان. قهرامان 10 دوره مسابقات کشوری. مدرس خصوصی و عمومی",
+                "button": "درباره من"
             }
         }
     }
