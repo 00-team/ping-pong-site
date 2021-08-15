@@ -1,3 +1,9 @@
 @mixin box($width, $height: $width)
     width: $width
     height: $height
+
+@mixin bg($url, $size: cover, $position: center, $repeat: no-repeat)
+    background-image: url($url)
+    background-size: $size
+    background-position: $position
+    background-repeat: $repeat
