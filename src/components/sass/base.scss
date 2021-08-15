@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Georama&display=swap'); // font-family: 'Caveat', cursive;
 
 @font-face {
-	font-family: "Vazir";
-	src: url("./fonts/Vazir/Vazir.eot") format("eot"),
-		 url("./fonts/Vazir/Vazir.woff2") format("woff2"),
-		 url("./fonts/Vazir/Vazir.woff") format("woff"),
-		 url("./fonts/Vazir/Vazir.ttf") format("truetype");
+    font-family: 'Vazir';
+    src: url('./fonts/Vazir/Vazir.eot') format('eot'),
+        url('./fonts/Vazir/Vazir.woff2') format('woff2'),
+        url('./fonts/Vazir/Vazir.woff') format('woff'),
+        url('./fonts/Vazir/Vazir.ttf') format('truetype');
 }
 
 * {
@@ -21,13 +21,15 @@
 
     button {
         cursor: pointer;
+        user-select: none;
     }
 
     &::-webkit-scrollbar {
         display: none;
     }
 
+    &::selection {
+        background-color: #111;
+        color: #fff;
+    }
 }
-
-
-
