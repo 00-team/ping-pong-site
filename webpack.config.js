@@ -29,17 +29,15 @@ var config = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: (path) => {
-                                if (path.search('favicon.ico') !== -1) {
+                            name: path => {
+                                if (path.search('favicon.ico') !== -1)
                                     return 'favicon.ico'
-                                } else {
-                                    return 'static/[name].[ext]'
-                                }
-                            }
+                                else return 'static/[name].[ext]'
+                            },
                         },
                     },
                 ],
-                type: 'javascript/auto',
+                // type: 'javascript/auto',
             },
         ],
     },
@@ -47,6 +45,7 @@ var config = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/static/template.html',
+            favicon: './src/static/img/favicon.ico',
             inject: true,
             publicPath: '/',
             templateParameters: {
@@ -57,7 +56,7 @@ var config = {
     devServer: {
         compress: true,
         port: 8000,
-        writeToDisk: true
+        writeToDisk: true,
     },
 }
 
