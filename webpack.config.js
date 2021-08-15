@@ -29,7 +29,13 @@ var config = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'static',
+                            name: (path) => {
+                                if (path.search('favicon.ico') !== -1) {
+                                    return 'favicon.ico'
+                                } else {
+                                    return 'static/[name].[ext]'
+                                }
+                            }
                         },
                     },
                 ],
@@ -42,7 +48,6 @@ var config = {
             filename: 'index.html',
             template: './src/static/template.html',
             inject: true,
-            favicon: './src/static/img/favicon.ico',
             publicPath: '/',
             templateParameters: {
                 SiteName: 'Ping Pong',
@@ -52,6 +57,7 @@ var config = {
     devServer: {
         compress: true,
         port: 8000,
+        writeToDisk: true
     },
 }
 
