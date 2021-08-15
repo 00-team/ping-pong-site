@@ -1,43 +1,32 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 // redux
-import { useSelector, useDispatch } from 'react-redux'
-// link 
-import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
+// link
+import { Link } from "react-router-dom";
 
 // locale
-import locale from '../../locale.json'
+import locale from "../../locale.json";
 
 // icon
-import {FaTypo3,FaTimes,FaBars} from "react-icons/fa";
+import { FaTypo3, FaTimes, FaBars } from "react-icons/fa";
 import { GiPingPongBat } from "react-icons/gi";
 
-
-
-
 // css
-import "../css/navbar.css"
+import "../css/navbar.css";
 
-// const csrfToken = document.currentScript.getAttribute('csrfToken') || Cookies.get('csrftoken')
-
-// const config = {
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'X-CSRFToken': csrfToken
-//     },
-// };
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  
+
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const [user, setUser] = useState(" ")
-  
-  const dispatch = useDispatch()
-  
+  const [user, setUser] = useState(" ");
+
+  const dispatch = useDispatch();
+
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -45,48 +34,39 @@ function Navbar() {
       setButton(true);
     }
   };
-  
 
   useEffect(() => {
     showButton();
   }, []);
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener("resize", showButton);
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            Mahmod Rizband
-            <GiPingPongBat />
+      <nav className="navbar">
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            محمود ریزبند <GiPingPongBat />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            { click ? <FaTimes /> : <FaBars/> }
+          <div className="menu-icon" onClick={handleClick}>
+            {click ? <FaTimes /> : <FaBars />}
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            
-            <li className='nav-item'>
-                <a className="nav-links" onClick={closeMobileMenu} href="#glories">
-                    Glories
-                </a>
-            </li>
-
-            <li className='nav-item'>
-                <a className="nav-links" onClick={closeMobileMenu} href="">
-                    Contact Us
-                </a>
-            </li>
-
-            {/* <li>
-              <Link
-                to='/signup'
-                className='nav-links-mobile'
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <a
+                className="nav-links fa"
                 onClick={closeMobileMenu}
+                href="#glories"
               >
-                About Us
-              </Link>
-            </li> */}
+                افتخارات
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-links fa" onClick={closeMobileMenu} href="#contact_us">
+                تماس با ما
+              </a>
+            </li> 
           </ul>
         </div>
       </nav>
