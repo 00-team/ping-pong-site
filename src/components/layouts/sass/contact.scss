@@ -1,27 +1,317 @@
-.contact{
-    margin: 10vh 0;
+.contact {
+    padding: 4rem;
+    position: relative;
 
-    h1.fa{
-       position: relative;
-      text-align: center;
-      font-size: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    h1.fa {
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, #1c1b1b 0%, #1a1717 100%);
-        bottom: -15%;
-        opacity: 0;
-        transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-      }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #1c1b1b 0%, #1a1717 100%);
+            bottom: -15%;
+            opacity: 0;
+            transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
 
-      &:hover::before {
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15vh;
+        position: relative;
+
+        .contact_us_card {
+            padding: 3rem 4.5rem;
+            box-shadow: 0 6px 20px rgb(56 125 255 / 30%);
+            -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+            filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+            border-radius: 10px;
+            overflow: hidden;
+            text-decoration: none;
+            border-radius: 2rem;
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                left: 0;
+            }
+        }
+
+        .social-btn .tooltip {
+            position: absolute;
+            top: 0;
+            z-index: 3;
+            background: #fff;
+            color: black;
+            padding: 10px 18px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 25px;
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .social-btn:hover .tooltip {
+            top: -70px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .social-btn .tooltip:before {
+            position: absolute;
+            content: '';
+            height: 15px;
+            width: 15px;
+            background: #fff;
+            left: 50%;
+            bottom: -6px;
+            transform: translateX(-50%) rotate(45deg);
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .social-btn:hover span {
+            color: black;
+        }
+
+        .social-btn:hover span,
+        .social-btn:hover .tooltip {
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .instagram:hover span,
+        .instagram:hover .tooltip,
+        .instagram:hover .tooltip:before {
+            background: #3b5999;
+        }
+
+        .telegram:hover span,
+        .telegram:hover .tooltip,
+        .telegram:hover .tooltip:before {
+            background: #46c1f6;
+        }
+
+        .instagram:hover span,
+        .instagram:hover .tooltip,
+        .instagram:hover .tooltip:before {
+            background: #f99257;
+        }
+
+        .whatsapp:hover span,
+        .whatsapp:hover .tooltip,
+        .whatsapp:hover .tooltip:before {
+            background: #27eb62;
+        }
+
+        .gmail:hover span,
+        .gmail:hover .tooltip,
+        .gmail:hover .tooltip:before {
+            background: #de463b;
+        }
+
+        h2.top {
+            margin: 5vh 0;
+        }
+
+        .top {
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+
+.social {
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 30px;
+    }
+
+    &-btn {
+        z-index: 1;
+        background: transparent;
+        border: none;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.05);
+
+            &::after {
+                width: 75px;
+                height: 45px;
+            }
+        }
+
+        &::before {
+            content: '';
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+            transform: translate(-40%, -65%);
+            width: 70px;
+            height: 40px;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+        & .fab {
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4.5em;
+            color: #fff;
+            text-shadow: -2px -1px 2px rgba(0, 0, 0, 1);
+        }
+
+        &.instagram {
+            &::before {
+                background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0.1),
+                        rgba(0, 0, 0, 0.1)
+                    ),
+                    linear-gradient(
+                        180deg,
+                        #f99257 0%,
+                        #e42d59 25%,
+                        #bb2d93 65%,
+                        #7738c5 100%
+                    );
+            }
+            &::after {
+                filter: blur(9px);
+                background: radial-gradient(#fff 20%, #bb2d93 50%, #7738c5 80%);
+                box-shadow: 0 0 10px rgba(#7738c5, 0.5);
+            }
+        }
+
+        &.gmail {
+            &::before {
+                background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0.2),
+                        rgba(#bd081c, 0.8)
+                    ),
+                    #bd081c;
+            }
+            &::after {
+                filter: blur(9px);
+                background: radial-gradient(#fff 20%, #bd081c 50%);
+                box-shadow: 0 0 10px rgba(#bd081c, 0.5);
+            }
+        }
+
+        &.snapchat {
+            &::before {
+                background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0.2),
+                        rgba(#000, 0.15)
+                    ),
+                    #fffc00;
+            }
+            &::after {
+                filter: blur(9px);
+                background: radial-gradient(transparent, rgba(#000, 0.05)),
+                    radial-gradient(#fff 20%, #fffc00 50%);
+                box-shadow: 0 0 10px rgba(#fffc00, 1);
+            }
+        }
+
+        &.telegram {
+            &::before {
+                background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0.2),
+                        rgba(#000, 0.15)
+                    ),
+                    #08a0e9;
+            }
+            &::after {
+                filter: blur(9px);
+                background: radial-gradient(#fff 20%, #08a0e9 50%);
+                box-shadow: 0 0 10px rgba(#08a0e9, 1);
+            }
+        }
+
+        &.whatsapp {
+            &::before {
+                background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0.2),
+                        rgba(#000, 0.2)
+                    ),
+                    linear-gradient(-35deg, #69c9d0 30%, #1dee40 75%);
+            }
+            &::after {
+                filter: blur(7px);
+                background: radial-gradient(#fff 20%, #2cd134 50%, #0fdd54 70%);
+                box-shadow: 0 0 10px rgba(#69c9d0, 0.5);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .social__list {
+        flex-direction: column;
+    }
+
+    .social-btn:focus .tooltip {
+        top: -70px;
+        z-index: 10;
         opacity: 1;
-      }
+        pointer-events: auto;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .contact {
+        padding: 0;
+        margin-bottom: 2rem;
     }
 }
