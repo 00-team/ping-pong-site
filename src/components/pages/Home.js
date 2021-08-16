@@ -18,7 +18,7 @@ function Home() {
 
         <Footer />
 
-        <Rackets />
+        {/* <Rackets /> */}
       </div>
     );
 }

@@ -42,36 +42,46 @@ function Navbar() {
   window.addEventListener("resize", showButton);
 
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            محمود ریزبند <GiPingPongBat />
-          </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            {click ? <FaTimes /> : <FaBars />}
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <a
-                className="nav-links fa"
-                onClick={closeMobileMenu}
-                href="#glories"
-              >
-                افتخارات
-              </a>
-            </li>
+      <>
+          <nav className='navbar'>
+              <div className='navbar-container'>
+                  <Link
+                      to='/'
+                      className='navbar-logo'
+                      onClick={closeMobileMenu}
+                  >
+                      محمود ریزبند <GiPingPongBat />
+                  </Link>
+                  <div className='menu-icon' onClick={handleClick}>
+                      {click ? <FaTimes /> : <FaBars />}
+                  </div>
+                  <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                      <li className='nav-item'>
+                          <a
+                              style={{ textAlign: 'center' }}
+                              className='nav-links fa'
+                              onClick={closeMobileMenu}
+                              href='#glories'
+                          >
+                              افتخارات
+                          </a>
+                      </li>
 
-            <li className="nav-item">
-              <a className="nav-links fa" onClick={closeMobileMenu} href="#contact_us">
-                تماس با ما
-              </a>
-            </li> 
-          </ul>
-        </div>
-      </nav>
-    </>
-  );
+                      <li className='nav-item'>
+                          <a
+                              style={{ textAlign: 'center' }}
+                              className='nav-links fa'
+                              onClick={closeMobileMenu}
+                              href='#contact_us'
+                          >
+                              تماس با ما
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+      </>
+  )
 }
 
 export default Navbar;
