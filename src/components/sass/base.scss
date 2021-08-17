@@ -11,6 +11,7 @@
 }
 
 * {
+    user-select: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,18 +24,36 @@
         cursor: pointer;
     }
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
 }
+
+
 
 html{
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #111;
+    border-radius: 20px;
+}
+
+
 .fa{
     text-align: right;
     font-family: 'Caveat', 'Vazir', cursive;
 }
+
+.center{
+    text-align: center;
+    font-family: 'Caveat', 'Vazir', cursive;
+}
+
 
