@@ -24,7 +24,7 @@ const Contact = () => {
 
             <div className='container'>
                 <h2 className='fa center top' style={{ textAlign: 'center' }}>
-                    راه های ارتباطی با ما
+                    راه های ارتباطی
                 </h2>
                 <div className='contact_us_card'>
                     <div className='container'>
