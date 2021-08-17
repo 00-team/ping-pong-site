@@ -11,6 +11,7 @@ import store from './database/store';
 // components
 import Home from './components/pages/Home';
 import Navbar from './components/layouts/Navbar';
+// import Navbar2 from './components/layouts/Navbar2';
 
 
 // style
@@ -25,7 +26,7 @@ const App = () => {
     
     return (
         <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <Switch>
                 <Route path="/" component={Home} />               
             </Switch>
