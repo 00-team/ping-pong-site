@@ -1,0 +1,16 @@
+.students {
+    padding: 3rem;
+    background-color: #fff;
+
+    // react player styling
+    .player-wrapper {
+        position: relative;
+        padding-top: 3rem;
+    }
+
+    .react-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
