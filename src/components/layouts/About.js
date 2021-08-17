@@ -35,66 +35,66 @@ const About = () => {
     }, [currentLocale])
 
     return (
-      <div className="about">
-        <div className="cards">
-          <h1
-            className="fa center"
-            id="glories"
-            style={{ textAlign: "center" }}
-          >
-            افتخارات
-          </h1>
-          <div className="cards__container">
-            <div className="cards__wrapper">
-              <ul className="cards__items">
-                <Glories
-                  src={lower1}
-                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-                  label="2005"
-                  path="/"
-                />
+        <div className='about'>
+            <div className='cards'>
+                <h1
+                    className='fa center'
+                    id='glories'
+                    style={{ textAlign: 'center' }}
+                >
+                    افتخارات
+                </h1>
+                <div className='cards__container'>
+                    <div className='cards__wrapper'>
+                        <ul className='cards__items'>
+                            <Glories
+                                src={lower1}
+                                text='گرفتن قهرمانی لیگ کشوری، محمود ریزبند به عنوان کاپیتان تیم ، بازیکن و مربی تیم'
+                                label='2005'
+                                path='/'
+                            />
 
-                <Glories
-                  src={lower2}
-                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-                  label="2001"
-                  path="/"
-                />
-              </ul>
-              <ul className="cards__items" id="grid">
-                <Glories
-                  src={lower3}
-                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-                  label="2018"
-                  path="/"
-                />
+                            <Glories
+                                src={lower2}
+                                text='گرفتن مدرک مربیگری سطح یک جهان '
+                                label='2001'
+                                path='/'
+                            />
+                        </ul>
+                        <ul className='cards__items' id='grid'>
+                            <Glories
+                                src={lower3}
+                                text='گرفتن قهرمانی نونهالان کشور، محمود ریزبد مربی تیم'
+                                label='2018'
+                                path='/'
+                            />
 
-                <Glories
-                  src={lower4}
-                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-                  label="2018"
-                  path="/"
-                />
+                            <Glories
+                                src={lower4}
+                                text='شرکت در لیگ کشور ترکیه'
+                                label='2018'
+                                path='/'
+                            />
 
-                <Glories
-                  src={lower5}
-                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-                  label="1980"
-                  path="/"
-                />
+                            <Glories
+                                src={lower5}
+                                text='انتخابی تیم ملی نوجوانان، محمود ریزبند مربی تیم تهران'
+                                label='1980'
+                                path='/'
+                            />
 
-                <Glories
-                  src={lower6}
-                  text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-                  label="2015"
-                  path="/"
-                />
-              </ul>
+                            <Glories
+                                src={lower6}
+                                text='گرفتن مقام نایب قهزمانی توسط رادین خیام یکی از شاگردان محمود ریزبند'
+                                label='2015'
+                                path='/'
+                            />
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    );
+    )
 }
 
 export default About;
