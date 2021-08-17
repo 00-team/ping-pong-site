@@ -90,6 +90,7 @@ h1#about{
   }
 
   .cards__item__pic-wrap::after {
+      opacity: 0;
       content: attr(data-category);
       position: absolute;
       bottom: 0;
