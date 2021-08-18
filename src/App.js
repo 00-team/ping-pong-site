@@ -6,8 +6,9 @@ import { Provider as ReduxProvider, useSelector } from 'react-redux'
 import store from './database/store'
 
 // components
-import Intro from './components/layouts/Intro'
 import Navbar from './components/layouts/Navbar'
+import Intro from './components/layouts/Intro'
+import About from './components/layouts/About'
 
 // style
 import './components/sass/base.scss'
@@ -26,6 +27,7 @@ const App = () => {
         <>
             <Navbar />
             <Intro />
+            <About />
         </>
     )
 }
