@@ -6,6 +6,7 @@
     @include mixins.box(100%, 100vh);
     color: #Fff;
     padding: 100px 30px;
+    overflow: hidden;
 
     .about {
         $pictures_width: 600px;

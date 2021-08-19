@@ -5,7 +5,7 @@
 .intro-container {
     @include mixins.box(100%, calc(100vh - #{$NAVBAR_HEIGHT}));
     @include mixins.bg('../../../static/img/intro.jpg', $position: top);
-
+    overflow: hidden;
     color: #fff;
     @include fonts.Georama(30px);
 
