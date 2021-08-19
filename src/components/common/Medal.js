@@ -10,7 +10,6 @@ const Medal = ({ rank }) => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
-            enable-background='new 0 0 68 68'
             viewBox='0 0 68 68'
         >
             <polygon
