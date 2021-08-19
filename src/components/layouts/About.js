@@ -6,6 +6,9 @@ import { useSelector } from 'react-redux'
 // functions
 import SmoothScroll from '../functions/SmothScroll'
 
+// commons
+import Button from '../common/Button'
+
 // style
 import './sass/about.scss'
 
@@ -98,6 +101,17 @@ const About = () => {
                 <div className='bio' style={{ direction: Locale.direction }}>
                     <h2>{aboutData.title}</h2>
                     <p>{aboutData.bio}</p>
+                    
+                    <div className='bottom-container'>
+                    <span>{aboutData.slogan}</span>
+                        <Button
+                            onClick={e =>
+                                SmoothScroll(document.querySelector('#about'))
+                            }
+                        >
+                            {aboutData.button}
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>
