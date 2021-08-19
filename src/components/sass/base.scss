@@ -19,11 +19,6 @@
         outline: none;
     }
 
-    button {
-        cursor: pointer;
-        user-select: none;
-    }
-
     &::-webkit-scrollbar {
         display: none;
     }
@@ -32,4 +27,13 @@
         background-color: #111;
         color: #fff;
     }
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+body {
+    background-color: #111;
 }

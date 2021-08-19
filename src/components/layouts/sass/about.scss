@@ -4,7 +4,6 @@
 
 .about-container {
     @include mixins.box(100%, 100vh);
-    background-color: #222;
     color: #Fff;
     padding: 100px 30px;
 
