@@ -1,0 +1,38 @@
+@use '../../sass/mixins.sass';
+
+.slider-container {
+    @include mixins.box(100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    .icon-container {
+        cursor: pointer;
+        transition: 200ms;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &.disable {
+            opacity: 0.3;
+            cursor: default;
+        }
+    }
+
+    .sliders-container {
+        @include mixins.box(100%);
+        overflow: hidden;
+
+        .slides-container {
+            @include mixins.box(100%);
+            display: flex;
+            transition: all 500ms;
+
+            .slide {
+                @include mixins.box(100%);
+                flex-shrink: 0;
+            }
+        }
+    }
+}
