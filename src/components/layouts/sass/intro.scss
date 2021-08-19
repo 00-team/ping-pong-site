@@ -5,8 +5,8 @@
 .intro-container {
     @include mixins.box(100%, calc(100vh - #{$NAVBAR_HEIGHT}));
     @include mixins.bg('../../../static/img/intro.jpg', $position: top);
-    
-    color: #FFF;
+
+    color: #fff;
     @include fonts.Georama(30px);
 
     .intro {
@@ -17,6 +17,10 @@
         align-items: baseline;
         height: 100%;
         position: relative;
+
+        .button {
+            margin: 300px auto;
+        }
 
         span {
             &.job {

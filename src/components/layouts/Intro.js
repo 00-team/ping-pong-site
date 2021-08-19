@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import Button from '../common/Button'
 
 // functions
-import SmothScroll from '../functions/SmothScroll'
+import SmoothScroll from '../functions/SmothScroll'
 
 // style
 import './sass/intro.scss'
@@ -29,7 +29,7 @@ const Intro = () => {
             <div className='intro' style={{ direction: Locale.direction }}>
                 <span className='name'>{introData.name}</span>
                 <span className='job'>{introData.job}</span>
-                <Button onClick={e => SmothScroll(document.querySelector('#about'))}>{introData.button}</Button>
+                <Button onClick={e => SmoothScroll(document.querySelector('#about'))}>{introData.button}</Button>
             </div>
         </div>
     )
