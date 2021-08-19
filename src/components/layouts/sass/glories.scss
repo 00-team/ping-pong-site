@@ -1,0 +1,11 @@
+@use '../../sass/variables.sass' as *;
+@use '../../sass/fonts.scss';
+@use '../../sass/mixins.sass';
+
+.glories-container {
+    @include mixins.box(100%, 100vh);
+
+    .glories {
+        color: #FFF;
+    }
+}
