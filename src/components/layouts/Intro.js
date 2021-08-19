@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import Button from '../common/Button'
 
 // functions
-import SmoothScroll from '../functions/SmothScroll'
+import SmoothScroll from '../functions/SmoothScroll'
 
 // style
 import './sass/intro.scss'

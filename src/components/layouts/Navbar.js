@@ -14,7 +14,7 @@ import { SiInstagram, SiGmail } from 'react-icons/si'
 import locales from '../../database/locale.json'
 
 // functions
-import SmoothScroll from '../functions/SmothScroll'
+import SmoothScroll from '../functions/SmoothScroll'
 
 // style
 import './sass/navbar.scss'

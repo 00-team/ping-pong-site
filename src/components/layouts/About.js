@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 // functions
-import SmoothScroll from '../functions/SmothScroll'
+import SmoothScroll from '../functions/SmoothScroll'
 
 // commons
 import Button from '../common/Button'
