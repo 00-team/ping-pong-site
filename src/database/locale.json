@@ -13,6 +13,11 @@
                 "about": "About Me",
                 "glories": "My Glories",
                 "students": "My Students"
+            },
+            "about": {
+                "title": "Biography",
+                "bio": "Elon Reeve Musk was born on June 28, 1971, in Pretoria, South Africa.[4] His mother is Maye Musk (née Haldeman), a model and dietitian born in Saskatchewan, Canada,[5][6][7] but raised in South Africa. His father is Errol Musk, a South African electromechanical engineer, pilot, sailor, consultant, and property developer.[8] Musk has a younger brother, Kimbal (born 1972), and a younger sister, Tosca (born 1974).[7][9] His maternal grandfather, Joshua Haldeman, was an American-born Canadian,[10][11] and Musk has British and Pennsylvania Dutch ancestry.[12][13] After his parents divorced in 1980, Musk mostly lived with his father in Pretoria and elsewhere,[12] a choice he made two years after the divorce and subsequently regretted.[14] Musk has become estranged from his father, whom he describes as 'a terrible human being... Almost every evil thing you could possibly think of, he has done.'[14] He has a half-sister and a half-brother on his father's side.[10][15]",
+                "button": "G"
             }
         }
     },
@@ -30,6 +35,11 @@
                 "about": "درباره من",
                 "glories": "افتخارات من",
                 "students": "شاگردان من"
+            },
+            "about": {
+                "title": "زندگی نامه",
+                "bio": "...",
+                "button": "افتخارات"
             }
         }
     }
