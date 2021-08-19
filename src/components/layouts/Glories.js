@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 // commons
 import Button from '../common/Button'
+import SlideShow from '../common/SlideShow'
 
 // functions
 import SmoothScroll from '../functions/SmoothScroll'
@@ -11,14 +12,14 @@ import './sass/glories.scss'
 
 const qs = q => document.querySelector(q)
 
-const GIcon = ({ type, onClick, className }) => {
+const GIcon = ({ type }) => {
     return (
         <svg
             strokeWidth='0'
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
-            className={'gicon' + (className ? ' ' + className : '')}
-            onClick={e => onClick(e)}
+            className={'gicon'}
+            style={ type === 'next' ? {marginLeft: '50px'} : {marginRight: '50px'}}
         >
             <polyline
                 fill='none'
@@ -33,7 +34,6 @@ const GIcon = ({ type, onClick, className }) => {
 
 GIcon.defaultProps = {
     type: '',
-    onClick: e => {},
 }
 
 const Glories = () => {
@@ -67,65 +67,26 @@ const Glories = () => {
             rank: 7, // 1 or 2 or 3
         },
     ]
-    const [gindex, setGindex] = useState(0)
-
-    const MoveSlide = direction => {
-        let action
-        if (direction === 'next') {
-            if (gindex >= glorys.length - 1) return
-            action = +1
-        } else if (direction === 'previous') {
-            if (gindex === 0) return
-            action = -1
-        } else {
-            return
-        }
-
-        let ow = qs('.glory').offsetWidth
-        qs('.glorys-container').style.transform = `translateX(-${
-            ow * (gindex + action)
-        }px)`
-
-        setGindex(gindex + action)
-    }
-
-    useEffect(() => {
-        window.onresize = () => qs('.glorys-container').style.transform = ''
-        return () => {
-            window.onresize = null
-        }
-    }, [])
 
     return (
         <div className='glories-container' id='glories'>
             <div className='glories'>
                 <h2>Glories</h2>
                 <div className='glories-slider'>
-                    <GIcon
-                        type='previous'
-                        className={gindex === 0 ? 'disable' : ''}
-                        onClick={e => MoveSlide('previous')}
-                    />
-                    <div className='glorys-top'>
-                        <div className='glorys-container'>
-                            {glorys.map((g, i) => (
-                                <div key={i} className='glory'>
-                                    {i}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <GIcon
-                        type='next'
-                        className={
-                            gindex === glorys.length - 1 ? 'disable' : ''
-                        }
-                        onClick={e => MoveSlide('next')}
-                    />
+                    <SlideShow
+                        NextIcon={<GIcon type='next' />}
+                        PreviousIcon={<GIcon type='previous' />}
+                    >
+                        {glorys.map((g, i) => (
+                            <div key={i} className='glory'>
+                                {i}
+                            </div>
+                        ))}
+                    </SlideShow>
                 </div>
                 <Button
                     onClick={e =>
-                        SmoothScroll(document.querySelector('#glories'))
+                        SmoothScroll(qs('#glories'))
                     }
                 >
                     Students
