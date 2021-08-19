@@ -9,6 +9,7 @@ import store from './database/store'
 import Navbar from './components/layouts/Navbar'
 import Intro from './components/layouts/Intro'
 import About from './components/layouts/About'
+import Glories from './components/layouts/Glories'
 
 // style
 import './components/sass/base.scss'
@@ -28,6 +29,7 @@ const App = () => {
             <Navbar />
             <Intro />
             <About />
+            <Glories />
         </>
     )
 }

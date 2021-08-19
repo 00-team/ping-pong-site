@@ -106,7 +106,7 @@ const About = () => {
                     <span>{aboutData.slogan}</span>
                         <Button
                             onClick={e =>
-                                SmoothScroll(document.querySelector('#about'))
+                                SmoothScroll(document.querySelector('#glories'))
                             }
                         >
                             {aboutData.button}

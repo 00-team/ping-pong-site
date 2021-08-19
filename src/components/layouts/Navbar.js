@@ -20,6 +20,7 @@ import SmoothScroll from '../functions/SmothScroll'
 import './sass/navbar.scss'
 
 const go = path => window.open(path)
+const qs = q => document.querySelector(q)
 
 const Navbar = () => {
     const Locale = useSelector(state => state.Locale)
@@ -76,14 +77,10 @@ const Navbar = () => {
                         Locale ? { direction: Locale.localeData.direction } : {}
                     }
                 >
-                    <span
-                        onClick={e =>
-                            SmoothScroll(document.querySelector('#about'))
-                        }
-                    >
+                    <span onClick={e => SmoothScroll(qs('#about'))}>
                         {navbarData.about}
                     </span>
-                    <span>{navbarData.glories}</span>
+                    <span onClick={e => SmoothScroll(qs('#glories'))}>{navbarData.glories}</span>
                     <span>{navbarData.students}</span>
                 </div>
                 <div className='navpart options'>
