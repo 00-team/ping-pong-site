@@ -8,12 +8,16 @@ import { CHANGE_LOCALE } from '../../database/reducers/locale/types'
 
 // icons
 import { MdGTranslate } from 'react-icons/md'
+import { FiMail } from 'react-icons/fi'
+import { SiInstagram, SiGmail } from 'react-icons/si'
 
 // locales
 import locales from '../../database/locale.json'
 
 // style
 import './sass/navbar.scss'
+
+const go = path => window.open(path)
 
 const Navbar = () => {
     const Locale = useSelector(state => state.Locale)
@@ -56,7 +60,10 @@ const Navbar = () => {
     return (
         <div className='navbar-container'>
             <nav className='navbar'>
-                <div className='navpart contact'></div>
+                <div className='navpart contact'>
+                    <a href="mailto:dr007cc@gmail.com"><SiGmail /></a>
+                    <SiInstagram onClick={e => go('https://instagram.com/i007c')} />
+                </div>
                 <div
                     className='navpart links'
                     style={
