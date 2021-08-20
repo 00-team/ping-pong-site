@@ -84,7 +84,7 @@ const About = () => {
                 <div className='bio' style={{ direction: Locale.direction }}>
                     <h2>{aboutData.title}</h2>
                     <div className='bottom-layer'>
-                        <p>{aboutData.bio}</p>
+                        <p>{aboutData.bio.split('*').map((g, index) => <span key={index} >{g}<br /></span>)}</p>
 
                         <div className='bottom-container'>
                             <span>{aboutData.slogan}</span>

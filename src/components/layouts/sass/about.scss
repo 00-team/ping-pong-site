@@ -120,9 +120,12 @@
                     span {
                         @include fonts.Georama(30px);
                         margin-bottom: 100px;
+                        @media (max-width: 1250px) {
+                            margin-bottom: 20px;
+                        }
                         @media (max-width: 1000px) {
                             font-size: 20px;
-                            margin-bottom: 20px;
+                            // margin-bottom: 20px;
                         }
                         @media (max-width: 550px) {
                             margin-top: 20px;

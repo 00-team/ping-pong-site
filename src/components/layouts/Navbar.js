@@ -61,10 +61,6 @@ const Navbar = () => {
         }
     }, [])
 
-    useEffect(() => {
-        console.log(WindowSize)
-    }, [WindowSize])
-
     const Contact = (
         <div className='navpart contact'>
             <a href='mailto:dr007cc@gmail.com'>
