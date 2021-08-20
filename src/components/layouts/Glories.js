@@ -19,17 +19,37 @@ import './sass/glories.scss'
 const qs = q => document.querySelector(q)
 
 const GIcon = ({ type }) => {
+    const WindowSize = useSelector(state => state.Base.windowWidth)
+    let cstyle = {}
+
+    if (type === 'next') {
+        if (WindowSize > 1300) {
+            cstyle = { marginLeft: '50px' }
+        }
+        if (WindowSize < 1200) {
+            cstyle = { position: 'absolute', right: '10px' }
+        }
+        if (WindowSize < 600) {
+            cstyle = { position: 'absolute', right: 0 }
+        }
+    } else {
+        if (WindowSize > 1300) {
+            cstyle = { marginRight: '50px' }
+        }
+        if (WindowSize < 1200) {
+            cstyle = { position: 'absolute', left: '10px' }
+        }
+        if (WindowSize < 600) {
+            cstyle = { position: 'absolute', left: 0 }
+        }
+    }
     return (
         <svg
             strokeWidth='0'
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
             className={'gicon'}
-            style={
-                type === 'next'
-                    ? { marginLeft: '50px' }
-                    : { marginRight: '50px' }
-            }
+            style={cstyle}
         >
             <polyline
                 fill='none'
@@ -83,18 +103,18 @@ const Glories = () => {
         {
             id: 1,
             img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg',
-            rank: 2
+            rank: 2,
         },
         {
             id: 2,
             img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg',
-            rank: 1
+            rank: 1,
         },
         {
             id: 3,
             img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg',
-            rank: 3
-        }
+            rank: 3,
+        },
     ])
 
     const Locale = useSelector(state => state.Locale.localeData)
@@ -106,11 +126,14 @@ const Glories = () => {
     useEffect(() => {
         if (Locale) {
             setGloriesData(Locale.text.glories)
-            if (typeof Locale.text.glories.glorys === 'object' && Locale.text.glories.glorys) {
-                let Glor = [];
+            if (
+                typeof Locale.text.glories.glorys === 'object' &&
+                Locale.text.glories.glorys
+            ) {
+                let Glor = []
                 Locale.text.glories.glorys.forEach(g => {
                     let gf = glorys.find(i => i.id === g.id)
-                    if (gf) Glor.push({...gf, ...g})
+                    if (gf) Glor.push({ ...gf, ...g })
                 })
                 setGlorys(Glor)
             }
@@ -134,7 +157,10 @@ const Glories = () => {
                                     className='picture'
                                     style={{ backgroundImage: `url(${g.img})` }}
                                 ></div>
-                                <div className='details' style={{ direction: Locale.direction }}>
+                                <div
+                                    className='details'
+                                    style={{ direction: Locale.direction }}
+                                >
                                     <div className='medal'>
                                         <Medal rank={g.rank} />
                                     </div>

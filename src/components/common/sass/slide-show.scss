@@ -5,10 +5,12 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    position: relative;
 
     .icon-container {
         cursor: pointer;
         transition: 200ms;
+        z-index: 5;
 
         &:hover {
             opacity: 0.7;
