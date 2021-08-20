@@ -17,6 +17,7 @@ const About = () => {
     const pictures = useRef(null)
     const [scrolling, setScrolling] = useState(true)
     const Locale = useSelector(state => state.Locale.localeData)
+    const WindowSize = useSelector(state => state.Base.windowWidth)
     const [aboutData, setAboutData] = useState({
         title: '',
         bio: '',
@@ -64,7 +65,14 @@ const About = () => {
                             key={index}
                             style={{
                                 ...(index % 2 === 1
-                                    ? { marginLeft: '250px' }
+                                    ? {
+                                          marginLeft:
+                                              WindowSize < 1100
+                                                  ? WindowSize < 500
+                                                      ? '110px'
+                                                      : '200px'
+                                                  : '250px',
+                                      }
                                     : {}),
                                 backgroundImage: `url(${pic})`,
                             }}
@@ -72,19 +80,24 @@ const About = () => {
                         ></div>
                     ))}
                 </div>
+
                 <div className='bio' style={{ direction: Locale.direction }}>
                     <h2>{aboutData.title}</h2>
-                    <p>{aboutData.bio}</p>
+                    <div className='bottom-layer'>
+                        <p>{aboutData.bio}</p>
 
-                    <div className='bottom-container'>
-                        <span>{aboutData.slogan}</span>
-                        <Button
-                            onClick={e =>
-                                SmoothScroll(document.querySelector('#glories'))
-                            }
-                        >
-                            {aboutData.button}
-                        </Button>
+                        <div className='bottom-container'>
+                            <span>{aboutData.slogan}</span>
+                            <Button
+                                onClick={e =>
+                                    SmoothScroll(
+                                        document.querySelector('#glories')
+                                    )
+                                }
+                            >
+                                {aboutData.button}
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
