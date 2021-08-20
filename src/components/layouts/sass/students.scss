@@ -12,13 +12,18 @@
         @include mixins.box(100%);
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
         padding: 30px;
         overflow: hidden;
+        align-items: center;
 
         h2 {
             @include fonts.Caveat(40px);
             margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .button {
+            margin-top: 20px;
         }
 
         .student-container {
@@ -27,10 +32,10 @@
             flex-direction: column;
             overflow-y: hidden;
             overflow-x: auto;
+            padding: 30px;
 
             .col {
                 display: flex;
-                width: 100%;
 
                 &:last-child {
                     margin-left: 300px;
@@ -81,6 +86,43 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include mixins.box(100vw, 100vh);
+        background-color: #000b;
+        z-index: 20;
+        display: grid;
+        place-items: center;
+
+        .close {
+            @include mixins.box(50px);
+            top: 10px;
+            right: 10px;
+            position: absolute;
+            color: #FFF;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+
+            svg {
+                @include mixins.box(100%);
+            }
+        }
+
+        .video {
+            width: 80%;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+
+            video {
+                width: 100%;
             }
         }
     }
