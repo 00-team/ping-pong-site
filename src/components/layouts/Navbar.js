@@ -24,6 +24,7 @@ const qs = q => document.querySelector(q)
 
 const Navbar = () => {
     const Locale = useSelector(state => state.Locale)
+    const WindowSize = useSelector(state => state.Base.windowWidth)
     const SelectRef = useRef(null)
     const dispatch = useDispatch()
     const [showMenu, setShowMenu] = useState(false)
@@ -60,53 +61,77 @@ const Navbar = () => {
         }
     }, [])
 
+    useEffect(() => {
+        console.log(WindowSize)
+    }, [WindowSize])
+
+    const Contact = (
+        <div className='navpart contact'>
+            <a href='mailto:dr007cc@gmail.com'>
+                <SiGmail />
+            </a>
+            <SiInstagram onClick={e => go('https://instagram.com/i007c')} />
+        </div>
+    )
+
+    const Links = (
+        <div
+            className='navpart links'
+            style={Locale ? { direction: Locale.localeData.direction } : {}}
+        >
+            <span onClick={e => SmoothScroll(qs('#about'))}>
+                {navbarData.about}
+            </span>
+            <span onClick={e => SmoothScroll(qs('#glories'))}>
+                {navbarData.glories}
+            </span>
+            <span onClick={e => SmoothScroll(qs('#students'))}>
+                {navbarData.students}
+            </span>
+        </div>
+    )
+
+    const Options = (
+        <div className='navpart options'>
+            {Locale && (
+                <div className='langs'>
+                    <MdGTranslate onClick={e => setShowMenu(!showMenu)} />
+                    <ul className={'menu' + (showMenu ? ' show' : '')}>
+                        {locales.map((lang, index) => (
+                            <li
+                                key={index}
+                                onClick={e => ChangeLang(lang.locale)}
+                            >
+                                {lang.displayName}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+    )
+
+    const Desktop = (
+        <>
+            {Contact}
+            {Links}
+            {Options}
+        </>
+    )
+
+    const Mobile = (
+        <>
+            <div className='col'>{Links}</div>
+            <div className='col'>
+                {Contact}
+                {Options}
+            </div>
+        </>
+    )
+
     return (
         <div className='navbar-container'>
-            <nav className='navbar'>
-                <div className='navpart contact'>
-                    <a href='mailto:dr007cc@gmail.com'>
-                        <SiGmail />
-                    </a>
-                    <SiInstagram
-                        onClick={e => go('https://instagram.com/i007c')}
-                    />
-                </div>
-                <div
-                    className='navpart links'
-                    style={
-                        Locale ? { direction: Locale.localeData.direction } : {}
-                    }
-                >
-                    <span onClick={e => SmoothScroll(qs('#about'))}>
-                        {navbarData.about}
-                    </span>
-                    <span onClick={e => SmoothScroll(qs('#glories'))}>
-                        {navbarData.glories}
-                    </span>
-                    <span onClick={e => SmoothScroll(qs('#students'))}>
-                        {navbarData.students}
-                    </span>
-                </div>
-                <div className='navpart options'>
-                    {Locale && (
-                        <div className='langs'>
-                            <MdGTranslate
-                                onClick={e => setShowMenu(!showMenu)}
-                            />
-                            <ul className={'menu' + (showMenu ? ' show' : '')}>
-                                {locales.map((lang, index) => (
-                                    <li
-                                        key={index}
-                                        onClick={e => ChangeLang(lang.locale)}
-                                    >
-                                        {lang.displayName}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-                </div>
-            </nav>
+            <nav className='navbar'>{WindowSize < 600 ? Mobile : Desktop}</nav>
         </div>
     )
 }
