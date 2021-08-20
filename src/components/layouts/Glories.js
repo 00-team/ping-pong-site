@@ -147,7 +147,7 @@ const Glories = () => {
                         ))}
                     </SlideShow>
                 </div>
-                <Button onClick={e => SmoothScroll(qs('#glories'))}>
+                <Button onClick={e => SmoothScroll(qs('#students'))}>
                     {gloriesData.button}
                 </Button>
             </div>

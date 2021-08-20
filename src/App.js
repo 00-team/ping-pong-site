@@ -10,6 +10,7 @@ import Navbar from './components/layouts/Navbar'
 import Intro from './components/layouts/Intro'
 import About from './components/layouts/About'
 import Glories from './components/layouts/Glories'
+import Students from './components/layouts/Students'
 
 // style
 import './components/sass/base.scss'
@@ -30,6 +31,7 @@ const App = () => {
             <Intro />
             <About />
             <Glories />
+            <Students />
         </>
     )
 }

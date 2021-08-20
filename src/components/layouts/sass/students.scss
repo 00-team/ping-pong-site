@@ -1,0 +1,9 @@
+@use '../../sass/variables.sass' as *;
+@use '../../sass/mixins.sass';
+@use '../../sass/fonts.scss';
+
+
+
+.students-container {
+    @include mixins.box(100%, 100vh);
+}

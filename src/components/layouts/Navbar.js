@@ -80,8 +80,12 @@ const Navbar = () => {
                     <span onClick={e => SmoothScroll(qs('#about'))}>
                         {navbarData.about}
                     </span>
-                    <span onClick={e => SmoothScroll(qs('#glories'))}>{navbarData.glories}</span>
-                    <span>{navbarData.students}</span>
+                    <span onClick={e => SmoothScroll(qs('#glories'))}>
+                        {navbarData.glories}
+                    </span>
+                    <span onClick={e => SmoothScroll(qs('#students'))}>
+                        {navbarData.students}
+                    </span>
                 </div>
                 <div className='navpart options'>
                     {Locale && (
