@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 // redux
-import { Provider as ReduxProvider, useSelector } from 'react-redux'
+import { Provider as ReduxProvider, useSelector, useDispatch } from 'react-redux'
 import store from './database/store'
+import { SET_SIZE } from './database/reducers/base/types'
 
 // components
 import Navbar from './components/layouts/Navbar'
@@ -17,6 +18,7 @@ import Footer from './components/layouts/Footer'
 import './components/sass/base.scss'
 
 const App = () => {
+    const dispatch = useDispatch()
     const Locale = useSelector(state => state.Locale)
 
     useEffect(() => {
@@ -25,6 +27,15 @@ const App = () => {
                 document.body.className = Locale.localeData.direction
             }
     }, [Locale])
+
+    useEffect(() => {
+        window.onresize = () => {
+            dispatch({ type: SET_SIZE, payload: window.innerWidth })
+        }
+        return () => {
+            window.onresize = null
+        }
+    }, [dispatch])
 
     return (
         <>
