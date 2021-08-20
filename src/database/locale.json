@@ -40,6 +40,22 @@
                         "description": "xxx"
                     }
                 ]
+            },
+            "students": {
+                "title": "Students",
+                "button": "Watch Movie",
+                "studentList": [
+                    {
+                        "id": 1,
+                        "name": "Random Dude 1",
+                        "description": "World Champ Winer"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Random Dude 2",
+                        "description": "World Champ Winer 2"
+                    }
+                ]
             }
         }
     },
@@ -82,6 +98,22 @@
                         "id": 3,
                         "title": "جام استانی",
                         "description": "استان طهران"
+                    }
+                ]
+            },
+            "students": {
+                "title": "شاگردان",
+                "button": "تماشای ویدیو",
+                "studentList": [
+                    {
+                        "id": 1,
+                        "name": "رندم",
+                        "description": "قهرمان جام جهانی"
+                    },
+                    {
+                        "id": 2,
+                        "name": "رندوم",
+                        "description": "قهرمان استانی"
                     }
                 ]
             }
