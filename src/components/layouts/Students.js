@@ -21,7 +21,7 @@ import videoFile from '../../static/videos/sample.mp4'
 const Students = () => {
     const studentContainer = useRef(null)
     const [scrolling, setScrolling] = useState(true)
-    const [showVideo, setShowVideo] = useState(true)
+    const [showVideo, setShowVideo] = useState(false)
 
     const [studentInitList, setSIL] = useState([
         {
