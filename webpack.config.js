@@ -24,7 +24,7 @@ var config = {
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(ico)$/i,
+                test: /\.(ico|mp4)$/i,
                 use: [
                     {
                         loader: 'file-loader',
