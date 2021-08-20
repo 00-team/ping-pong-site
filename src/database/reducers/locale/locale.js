@@ -3,11 +3,12 @@ import { CHANGE_LOCALE } from './types'
 // all locales
 import data from '../../locale.json'
 
+const defualtLangIndex = 1
 const AllowdLocales = data.map(d => d.locale)
 
 const initState = {
-    locale: AllowdLocales[0] || null,
-    localeData: data[0],
+    locale: AllowdLocales[defualtLangIndex] || null,
+    localeData: data[defualtLangIndex],
 }
 
 export default (state = initState, action) => {
