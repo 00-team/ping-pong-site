@@ -1,5 +1,7 @@
 :root {
     --primary: #fff;
+    --btn: 20px;
+    --btn_mobile: 13px;
 }
 
 .btn {
@@ -42,4 +44,18 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
+}
+
+@media screen and (max-width: 960px) {
+
+    .btn{
+        padding: 10px 5px;
+        min-width: 100px;
+    }
+    .btn--medium {
+        font-size: 9px;
+    }
+    .btn--large {
+        font-size: var(--btn_mobile);
+    }
 }

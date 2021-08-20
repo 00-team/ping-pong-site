@@ -45,13 +45,6 @@ function Navbar() {
       <>
           <nav className='navbar'>
               <div className='navbar-container'>
-                  <Link
-                      to='/'
-                      className='navbar-logo'
-                      onClick={closeMobileMenu}
-                  >
-                      محمود ریزبند <GiPingPongBat />
-                  </Link>
                   <div className='menu-icon' onClick={handleClick}>
                       {click ? <FaTimes /> : <FaBars />}
                   </div>
@@ -61,12 +54,11 @@ function Navbar() {
                               style={{ textAlign: 'center' }}
                               className='nav-links fa'
                               onClick={closeMobileMenu}
-                              href='#glories'
+                              href='#contact_us'
                           >
-                              افتخارات
+                              تماس با ما
                           </a>
                       </li>
-
                       <li className='nav-item'>
                           <a
                               style={{ textAlign: 'center' }}
@@ -74,7 +66,17 @@ function Navbar() {
                               onClick={closeMobileMenu}
                               href='#contact_us'
                           >
-                              تماس با ما
+                              شاگردان
+                          </a>
+                      </li>
+                      <li className='nav-item'>
+                          <a
+                              style={{ textAlign: 'center' }}
+                              className='nav-links fa'
+                              onClick={closeMobileMenu}
+                              href='#glories'
+                          >
+                              افتخارات
                           </a>
                       </li>
                   </ul>

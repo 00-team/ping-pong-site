@@ -23,9 +23,9 @@ const Contact = () => {
             </h1>
 
             <div className='container'>
-                <h2 className='fa center top' style={{ textAlign: 'center' }}>
+                {/* <h2 className='fa center top' style={{ textAlign: 'center' }}>
                     راه های ارتباطی
-                </h2>
+                </h2> */}
                 <div className='contact_us_card'>
                     <div className='container'>
                         <ul className='social__list'>

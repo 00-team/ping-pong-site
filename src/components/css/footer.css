@@ -162,7 +162,7 @@
   }
 
   .btn {
-    width: 100%;
+    width: 70%;
   }
 
   .footer-link-wrapper {
@@ -172,7 +172,4 @@
   .social-media-wrap {
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 768px) {
 }

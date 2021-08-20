@@ -1,12 +1,19 @@
+$heading1: 80px;
+$heading2: 40px;
+$disc: 24px;
+$heading1_mobile: 40px;
+$heading2_mobile: 20px;
+$disc_mobile: 12px;
+
 .contact {
     background-color: #fff;
     padding: 4rem;
     position: relative;
 
-    h1.fa {
+    h1 {
         position: relative;
         text-align: center;
-        font-size: 50px;
+        font-size: $heading1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,10 +38,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 15vh;
         position: relative;
+        margin-top: 2vh;
 
         .contact_us_card {
+            margin-top: 5vh;
             padding: 3rem 4.5rem;
             box-shadow: 0 6px 20px rgb(56 125 255 / 30%);
             -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -125,8 +133,9 @@
             background: #de463b;
         }
 
-        h2.top {
+        h2 {
             margin: 5vh 0;
+            font-size: $heading2;
         }
 
         .top {
@@ -313,6 +322,22 @@
 @media only screen and (max-width: 1024px) {
     .contact {
         padding: 0;
-        margin-bottom: 2rem;
+
+        .contact_us_card {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .contact {
+        h1 {
+            font-size: $heading1_mobile;
+        }
+        .container {
+            h2.top {
+                font-size: $heading2_mobile;
+            }
+        }
     }
 }

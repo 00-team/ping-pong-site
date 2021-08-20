@@ -23,7 +23,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(ico|mp4)$/i,
+                test: /\.(jpg|ico|mp4)$/i,
                 use: [
                     {
                         loader: 'file-loader',

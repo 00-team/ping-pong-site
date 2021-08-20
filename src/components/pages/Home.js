@@ -13,21 +13,21 @@ import Footer from '../layouts/Footer'
 
 function Home() {
     return (
-      <div className="home">
-        {/* <ImgSlider /> */}
-        <HeroSection />
+        <div className='home'>
+            {/* <ImgSlider /> */}
+            <HeroSection />
+            <h1 className='fa center topic' >محمود ریزبند</h1>
+            <About />
 
-        <About />
+            <Students />
 
-        <Students />
+            <Contact />
 
-        <Contact />
+            <Footer />
 
-        <Footer />
-
-        {/* <Rackets /> */}
-      </div>
-    );
+            {/* <Rackets /> */}
+        </div>
+    )
 }
 
 export default Home

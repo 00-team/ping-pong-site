@@ -35,13 +35,16 @@
 }
 
 .nav-menu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, auto); */
+  /* grid-gap: 10px; */
+  /* justify-content: end; */
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: end;
   margin-right: 2rem;
 }
 
