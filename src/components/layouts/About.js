@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 
 // functions
 import SmoothScroll from '../functions/SmoothScroll'
+import AutoScroll from '../functions/AutoScroll'
 
 // commons
 import Button from '../common/Button'
@@ -14,16 +15,13 @@ import './sass/about.scss'
 
 const About = () => {
     const pictures = useRef(null)
-    const [picturesScroll, setPicturesScroll] = useState({
-        scrolling: true,
-        scrollDirection: +1,
-    })
+    const [scrolling, setScrolling] = useState(true)
     const Locale = useSelector(state => state.Locale.localeData)
     const [aboutData, setAboutData] = useState({
         title: '',
         bio: '',
         slogan: '',
-        button: ''
+        button: '',
     })
 
     useEffect(() => {
@@ -39,26 +37,10 @@ const About = () => {
     ]
 
     useEffect(() => {
-        if (!pictures.current) return
+        let ScrollInterval
 
-        var ScrollInterval
-
-        const ScrollAnimimation = e => {
-            if (e.offsetHeight + e.scrollTop >= e.scrollHeight) {
-                setPicturesScroll({ ...picturesScroll, scrollDirection: -1 })
-            } else if (e.scrollTop === 0) {
-                setPicturesScroll({ ...picturesScroll, scrollDirection: +1 })
-            }
-
-            e.scroll({ top: e.scrollTop + picturesScroll.scrollDirection })
-        }
-
-        if (picturesScroll.scrolling) {
-            ScrollInterval = setInterval(
-                ScrollAnimimation,
-                50,
-                pictures.current
-            )
+        if (pictures.current && scrolling) {
+            ScrollInterval = AutoScroll(pictures.current, 'top')
         } else {
             clearInterval(ScrollInterval)
         }
@@ -66,7 +48,7 @@ const About = () => {
         return () => {
             clearInterval(ScrollInterval)
         }
-    }, [pictures, picturesScroll])
+    }, [pictures, scrolling])
 
     return (
         <div className='about-container' id='about'>
@@ -74,18 +56,8 @@ const About = () => {
                 <div
                     className='pictures'
                     ref={pictures}
-                    onMouseEnter={e =>
-                        setPicturesScroll({
-                            ...picturesScroll,
-                            scrolling: false,
-                        })
-                    }
-                    onMouseLeave={e =>
-                        setPicturesScroll({
-                            ...picturesScroll,
-                            scrolling: true,
-                        })
-                    }
+                    onMouseEnter={e => setScrolling(false)}
+                    onMouseLeave={e => setScrolling(true)}
                 >
                     {pics.map((pic, index) => (
                         <div
@@ -103,9 +75,9 @@ const About = () => {
                 <div className='bio' style={{ direction: Locale.direction }}>
                     <h2>{aboutData.title}</h2>
                     <p>{aboutData.bio}</p>
-                    
+
                     <div className='bottom-container'>
-                    <span>{aboutData.slogan}</span>
+                        <span>{aboutData.slogan}</span>
                         <Button
                             onClick={e =>
                                 SmoothScroll(document.querySelector('#glories'))
