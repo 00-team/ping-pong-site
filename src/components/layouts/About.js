@@ -22,6 +22,8 @@ const About = () => {
     const [aboutData, setAboutData] = useState({
         title: '',
         bio: '',
+        slogan: '',
+        button: ''
     })
 
     useEffect(() => {
