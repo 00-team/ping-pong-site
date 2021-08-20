@@ -14,17 +14,20 @@ const SlideShow = ({ children, NextIcon, PreviousIcon }) => {
     }, [children])
 
     useEffect(() => {
-        window.onresize = () => {
-            let sindex = qs('.slides-container').getAttribute('data-index')
-            let ow = qs('.slide').offsetWidth
-            qs('.slides-container').style.transform = `translateX(-${
+        let sliderObserver = new ResizeObserver(e => {
+            let sindex = slidesContainer.current.getAttribute('data-index')
+            let ow = slidesContainer.current.querySelector('.slide').offsetWidth
+            slidesContainer.current.style.transform = `translateX(-${
                 ow * sindex
             }px)`
+        })
+        if (slidesContainer.current) {
+            sliderObserver.observe(slidesContainer.current)
         }
         return () => {
-            window.onresize = null
+            sliderObserver.disconnect()
         }
-    }, [])
+    }, [slidesContainer])
 
     const MoveSlide = direction => {
         let action
@@ -36,7 +39,7 @@ const SlideShow = ({ children, NextIcon, PreviousIcon }) => {
             action = -1
         } else return
 
-        let ow = qs('.slide').offsetWidth
+        let ow = slidesContainer.current.querySelector('.slide').offsetWidth
 
         if (slidesContainer.current) {
             slidesContainer.current.style.transform = `translateX(-${
@@ -59,7 +62,11 @@ const SlideShow = ({ children, NextIcon, PreviousIcon }) => {
                 {PreviousIcon}
             </div>
             <div className='sliders-container'>
-                <div className='slides-container' ref={slidesContainer} data-index={slides.index}>
+                <div
+                    className='slides-container'
+                    ref={slidesContainer}
+                    data-index={slides.index}
+                >
                     {children &&
                         children.map((slide, index) => (
                             <div key={index} className='slide'>
