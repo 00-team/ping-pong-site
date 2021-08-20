@@ -19,6 +19,27 @@
                 "bio": "Elon Reeve Musk was born on June 28, 1971, in Pretoria, South Africa. His mother is Maye Musk (née Haldeman), a model and dietitian born in Saskatchewan, Canada, but raised in South Africa. His father is Errol Musk, a South African electromechanical engineer, pilot, sailor, consultant, and property developer. Musk has a younger brother, Kimbal (born 1972), and a younger sister, Tosca (born 1974). His maternal grandfather, Joshua Haldeman, was an American-born Canadian, and Musk has British and Pennsylvania Dutch ancestry. After his parents divorced in 1980, Musk mostly lived with his father in Pretoria and elsewhere, a choice he made two years after the divorce and subsequently regretted. Musk has become estranged from his father, whom he describes as He has a half-sister and a half-brother on his father's side.",
                 "slogan": "I could either watch it happen or be a part of it.",
                 "button": "Glories"
+            },
+            "glories": {
+                "title": "Glories",
+                "button": "Students",
+                "glorys": [
+                    {
+                        "id": 1,
+                        "title": "World Champ",
+                        "description": "xxx"
+                    },
+                    {
+                        "id": 2,
+                        "title": "WC 2",
+                        "description": "xxx"
+                    },
+                    {
+                        "id": 3,
+                        "title": "WC 3",
+                        "description": "xxx"
+                    }
+                ]
             }
         }
     },
@@ -42,6 +63,27 @@
                 "bio": "ایلون ریوز ماسک در 28 ژوئن 1971 در پرتوریا ، آفریقای جنوبی متولد شد. مادرش مای ماسک (نی هالدمن) ، یک مدل و متخصص تغذیه است که در ساسکاچوان کانادا متولد شده اما در آفریقای جنوبی بزرگ شده است. پدرش ارول ماسک ، مهندس الکترومکانیک آفریقای جنوبی ، خلبان ، ملوان ، مشاور و توسعه دهنده املاک است. ماسک یک برادر کوچکتر به نام کیمبال (متولد 1972) و یک خواهر کوچکتر به نام توسکا (متولد 1974) دارد. پدربزرگ مادری او ، جاشوا هالدمن ، کانادایی تبار آمریکایی بود و ماسک دارای تبار هلندی بریتانیایی و پنسیلوانیا است. پس از طلاق والدینش در سال 1980 ، ماسک بیشتر با پدرش در پرتوریا و جاهای دیگر زندگی می کرد ، انتخابی که دو سال پس از طلاق انجام داد و پس از آن پشیمان شد. ماسک با پدرش بیگانه شده است.",
                 "slogan": "من یا می توانم شاهد وقوع آن باشم یا بخشی از آن باشم.",
                 "button": "افتخارات"
+            },
+            "glories": {
+                "title": "افتخارات",
+                "button": "شاگردان",
+                "glorys": [
+                    {
+                        "id": 1,
+                        "title": "جام جهانی 1",
+                        "description": "..."
+                    },
+                    {
+                        "id": 2,
+                        "title": "جام قهرمانی",
+                        "description": "ایران"
+                    },
+                    {
+                        "id": 3,
+                        "title": "جام استانی",
+                        "description": "استان طهران"
+                    }
+                ]
             }
         }
     }
