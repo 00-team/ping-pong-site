@@ -1,0 +1,25 @@
+@use '../../sass/variables.sass' as *;
+@use '../../sass/mixins.sass';
+@use '../../sass/fonts.scss';
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+
+    footer {
+        @include fonts.Georama(20px);
+        .creator {
+            @include fonts.Caveat(30px);
+            cursor: pointer;
+            transition: all 300ms;
+
+            &:hover {
+                color: #17f1d7;
+            }
+        }
+    }
+}

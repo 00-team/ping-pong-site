@@ -11,6 +11,7 @@ import Intro from './components/layouts/Intro'
 import About from './components/layouts/About'
 import Glories from './components/layouts/Glories'
 import Students from './components/layouts/Students'
+import Footer from './components/layouts/Footer'
 
 // style
 import './components/sass/base.scss'
@@ -32,6 +33,7 @@ const App = () => {
             <About />
             <Glories />
             <Students />
+            <Footer />
         </>
     )
 }
