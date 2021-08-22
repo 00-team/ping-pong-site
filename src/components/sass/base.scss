@@ -52,6 +52,9 @@ html {
 body {
     overflow-x: hidden;
     font-size: 10px;
+
+    background-image: url("../../static/img/bg.png");
+    background-repeat: repeat;
 }
 
 .fa {
@@ -88,5 +91,10 @@ body {
         background-color: #fff;
         font-size: 40px;
         padding: 3vh 0;
+    }
+}
+@media screen and (max-width: 1280px) {
+    body{
+        background: #fff;
     }
 }
