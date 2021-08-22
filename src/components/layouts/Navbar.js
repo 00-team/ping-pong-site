@@ -66,7 +66,7 @@ const Navbar = () => {
             <a href='mailto:dr007cc@gmail.com'>
                 <SiGmail />
             </a>
-            <SiInstagram onClick={e => go('https://instagram.com/i007c')} />
+            <SiInstagram onClick={e => go('https://www.instagram.com/mahmoodrezarizband25/')} />
         </div>
     )
 
