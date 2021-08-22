@@ -6,7 +6,7 @@ $heading2_mobile: 20px;
 $disc_mobile: 12px;
 
 .contact {
-    background-color: #fff;
+    // background-color: #fff;
     padding: 4rem;
     position: relative;
 
@@ -42,6 +42,7 @@ $disc_mobile: 12px;
         margin-top: 2vh;
 
         .contact_us_card {
+            background-color: snow;
             margin-top: 5vh;
             padding: 3rem 4.5rem;
             box-shadow: 0 6px 20px rgb(56 125 255 / 30%);
