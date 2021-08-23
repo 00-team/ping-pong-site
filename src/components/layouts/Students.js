@@ -16,7 +16,7 @@ import Button from '../common/Button'
 import './sass/students.scss'
 
 // files
-import videoFile from '../../static/videos/sample.mp4'
+import videoFile from '../../static/videos/students.mp4'
 
 const Students = () => {
     const studentContainer = useRef(null)

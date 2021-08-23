@@ -13,6 +13,12 @@ import Button from '../common/Button'
 // style
 import './sass/about.scss'
 
+// images
+import Profile from '../../static/img/about/Profile.jpg'
+import Profile1 from '../../static/img/about/Profile-1.jpg'
+import Profile2 from '../../static/img/about/Profile-2.jpg'
+import Profile3 from '../../static/img/about/Profile-3.jpg'
+
 const About = () => {
     const pictures = useRef(null)
     const [scrolling, setScrolling] = useState(true)
@@ -30,11 +36,10 @@ const About = () => {
     }, [Locale])
 
     const pics = [
-        'https://cdn.discordapp.com/attachments/731174051170746500/825911332176003112/bg.png',
-        'https://cdn.discordapp.com/attachments/731174051170746500/808355617441710130/mars-planet-vector-13949696.jpg',
-        'https://cdn.discordapp.com/attachments/731174051170746500/742433176260968498/logo-kepler.png',
-        'https://cdn.discordapp.com/attachments/731174051170746500/734284348567846952/wp3025611.jpg',
-        'https://cdn.discordapp.com/attachments/731174051170746500/732383227909767218/gta-v-galle.png',
+        Profile,
+        Profile1,
+        Profile2,
+        Profile3,
     ]
 
     useEffect(() => {

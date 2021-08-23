@@ -130,13 +130,13 @@
         }
 
         .video {
-            width: 80%;
+            @include mixins.box(80vw, 80vh);
             @media (max-width: 600px) {
                 width: 100%;
             }
 
             video {
-                width: 100%;
+                @include mixins.box(100%);
             }
         }
     }

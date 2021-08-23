@@ -39,6 +39,10 @@ var config = {
                 ],
                 type: 'javascript/auto',
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ],
     },
     plugins: [
