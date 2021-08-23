@@ -14,6 +14,8 @@ import Glories from './components/layouts/Glories'
 import Students from './components/layouts/Students'
 import Footer from './components/layouts/Footer'
 
+import Head from './components/Head'
+
 // style
 import './components/sass/base.scss'
 
@@ -39,6 +41,7 @@ const App = () => {
 
     return (
         <>
+            <Head SiteName='Ping Pong' />
             <Navbar />
             <Intro />
             <About />
