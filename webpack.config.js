@@ -37,7 +37,7 @@ var config = {
                         },
                     },
                 ],
-                // type: 'javascript/auto',
+                type: 'javascript/auto',
             },
         ],
     },
@@ -45,18 +45,13 @@ var config = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/static/template.html',
-            favicon: './src/static/img/favicon.ico',
             inject: true,
             publicPath: '/',
-            templateParameters: {
-                SiteName: 'Ping Pong',
-            },
         }),
     ],
     devServer: {
         compress: true,
         port: 8000,
-        writeToDisk: true,
     },
 }
 
