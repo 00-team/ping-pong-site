@@ -8,7 +8,7 @@ import { CHANGE_LOCALE } from '../../database/reducers/locale/types'
 
 // icons
 import { MdGTranslate } from 'react-icons/md'
-import { SiInstagram, SiGmail } from 'react-icons/si'
+import { SiInstagram, SiGmail, SiWhatsapp } from 'react-icons/si'
 
 // locales
 import locales from '../../database/locale.json'
@@ -63,9 +63,10 @@ const Navbar = () => {
 
     const Contact = (
         <div className='navpart contact'>
-            <a href='mailto:dr007cc@gmail.com'>
+            {/* <a href='mailto:dr007cc@gmail.com'>
                 <SiGmail />
-            </a>
+            </a> */}
+            <SiWhatsapp onClick={e => go('https://wa.me/09120974956')} />
             <SiInstagram onClick={e => go('https://www.instagram.com/mahmoodrezarizband25/')} />
         </div>
     )
