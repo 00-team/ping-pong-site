@@ -18,6 +18,9 @@ import './sass/students.scss'
 // files
 import videoFile from '../../static/videos/students.mp4'
 
+// images
+import s1 from '../../static/img/students/s1.jpg'
+
 const Students = () => {
     const studentContainer = useRef(null)
     const [scrolling, setScrolling] = useState(true)
@@ -26,7 +29,7 @@ const Students = () => {
     const [studentInitList, setSIL] = useState([
         {
             id: 1,
-            img: 'https://cdn.discordapp.com/attachments/731174051170746500/836798695139573840/007_logo_f27.png',
+            img: s1,
             year: 2019,
         },
         {

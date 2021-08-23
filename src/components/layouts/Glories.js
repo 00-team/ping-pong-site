@@ -16,6 +16,14 @@ import SmoothScroll from '../functions/SmoothScroll'
 // style
 import './sass/glories.scss'
 
+// images
+import g1 from '../../static/img/glories/g-1.jpg'
+import g2 from '../../static/img/glories/g-2.jpg'
+import g3 from '../../static/img/glories/g-3.jpg'
+import g4 from '../../static/img/glories/g-4.jpg'
+import g5 from '../../static/img/glories/g-5.jpg'
+import g6 from '../../static/img/glories/g-6.jpg'
+
 const qs = q => document.querySelector(q)
 
 const GIcon = ({ type }) => {
@@ -72,18 +80,33 @@ const Glories = () => {
     const [glorys, setGlorys] = useState([
         {
             id: 1,
-            img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg',
-            rank: 2,
+            img: g1,
+            rank: 1,
         },
         {
             id: 2,
-            img: 'http://irttf.ir/wp-content/uploads/2021/07/IMG_3403-1100x700.jpg',
+            img: g2,
             rank: 1,
         },
         {
             id: 3,
-            img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg',
-            rank: 3,
+            img: g3,
+            rank: 1,
+        },
+        {
+            id: 4,
+            img: g4,
+            rank: 4,
+        },
+        {
+            id: 5,
+            img: g5,
+            rank: 4,
+        },
+        {
+            id: 6,
+            img: g6,
+            rank: 2,
         },
     ])
 
