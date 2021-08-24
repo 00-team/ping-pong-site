@@ -10,6 +10,7 @@ import About from '../layouts/About'
 import Contact from '../layouts/Contact'
 import Students from '../layouts/Students'
 import Footer from '../layouts/Footer'
+import Bio from '../layouts/Bio'
 
 function Home() {
     return (
@@ -17,6 +18,8 @@ function Home() {
             {/* <ImgSlider /> */}
             <HeroSection />
             <h1 className='fa center topic' >محمود ریزبند</h1>
+            <Bio />
+
             <About />
 
             <Students />

@@ -54,10 +54,11 @@ body {
     font-size: 10px;
 
     background-image: url("../../static/img/bg.png");
-    background-repeat: repeat;
+    background-repeat: space;
 }
 
 .fa {
+    font-size: $disc;
     text-align: right;
     font-family: 'Caveat', 'Vazir', cursive;
 }
@@ -83,6 +84,9 @@ body {
 @media screen and (max-width: 960px) {
     ::-webkit-scrollbar {
         display: none;
+    }
+    .fa{
+        font-size: $disc_mobile;
     }
     .center{
         font-size: $heading2_mobile;
