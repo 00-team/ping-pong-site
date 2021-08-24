@@ -31,7 +31,9 @@ const Contact = () => {
                         <ul className='social__list'>
                             <li className='social__item'>
                                 <button className='social-btn instagram'>
-                                    <div className='tooltip'>@MahmodRizband</div>
+                                    <div className='tooltip'>
+                                        @MahmodRizband
+                                    </div>
                                     <a
                                         href='https://www.instagram.com/mahmoodrezarizband25/'
                                         target='_blank'
@@ -43,13 +45,20 @@ const Contact = () => {
 
                             <li className='social__item'>
                                 <button className='social-btn telegram'>
-                                    <div className='tooltip'>@MahmodRizband</div>
+                                    <div className='tooltip'>
+                                        @MahmodRizband
+                                    </div>
                                     <FaTelegramPlane className='fab' />
                                 </button>
                             </li>
 
                             <li className='social__item'>
-                                <button className='social-btn whatsapp'>
+                                <button
+                                    className='social-btn whatsapp'
+                                    onClick={e =>
+                                        window.open('https://wa.me/09120974956')
+                                    }
+                                >
                                     <div className='tooltip'>09120974956</div>
                                     <FaWhatsapp className='fab' />
                                 </button>
@@ -57,7 +66,9 @@ const Contact = () => {
 
                             <li className='social__item'>
                                 <button className='social-btn gmail'>
-                                    <div className='tooltip'>MahmodRizband@gmail.com</div>
+                                    <div className='tooltip'>
+                                        MahmodRizband@gmail.com
+                                    </div>
                                     <CgMail className='fab' />
                                 </button>
                             </li>
