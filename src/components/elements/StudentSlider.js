@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // icons
 import { FcPrevious, FcNext } from 'react-icons/fc'
@@ -27,6 +27,16 @@ const images = [
         discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
         id: 3,
     },
+    {
+        img: 'https://cdn.discordapp.com/attachments/731174051170746500/840946150852001792/zz.png',
+        discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
+        id: 4,
+    },
+    {
+        img: 'https://cdn.discordapp.com/attachments/731174051170746500/772103695013249094/hmm1.png',
+        discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
+        id: 5,
+    },
 ]
 
 function StudentSlider() {
@@ -41,31 +51,50 @@ function StudentSlider() {
     }
 
     const prevSlide = () => {
-        console.log(slideIndex, images.length)
-        if (slideIndex !== 0) {
-            setSlideIndex(slideIndex - 1)
-        } else if (slideIndex === 0) {
+        if (slideIndex === 0) {
             setSlideIndex(images.length - 1)
+        } else {
+            setSlideIndex(slideIndex - 1)
         }
+    }
+
+    const getYourClass = index => {
+        if (index === slideIndex) return ' current'
+        else if (
+            index === slideIndex + 1 ||
+            (slideIndex === images.length - 1 && index === 0)
+        )
+            return ' next'
+        else if (
+            index === slideIndex - 1 ||
+            (slideIndex === 0 && index === images.length - 1)
+        )
+            return ' previous'
+        else return ''
     }
 
     return (
         <div className='slider'>
             <div className='btns prev'>
-                {' '}
-                <FcPrevious size={60} onClick={prevSlide} />{' '}
+                <FcPrevious size={60} onClick={prevSlide} />
             </div>
             <div className='btns next'>
-                {' '}
-                <FcNext size={60} onClick={nextSlide} />{' '}
+                <FcNext size={60} onClick={nextSlide} />
             </div>
-            <div className='container' >
+            <div className='container'>
                 {images.map((obj, index) => {
                     return (
-                        <div className='card' key={index}>
-                            <img className='img' src={obj.img} alt='' />
-                            <div className='discription fa'>
-                                <h5>{obj.discription}</h5>
+                        <div
+                            className={'card-slide' + getYourClass(index)}
+                            key={index}
+                            onClick={() => setSlideIndex(index)}
+                        >
+                            <div className='overlay'></div>
+                            <div className={'card'}>
+                                <img className='img' src={obj.img} alt='' />
+                                <div className='discription fa'>
+                                    <h5>{obj.discription}</h5>
+                                </div>
                             </div>
                         </div>
                     )
