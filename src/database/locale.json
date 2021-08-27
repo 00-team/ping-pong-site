@@ -69,6 +69,11 @@
                         "id": 2,
                         "name": "Random Dude 2",
                         "description": "World Champ Winer 2"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Random Dude 2",
+                        "description": "World Champ Winer 2"
                     }
                 ]
             }
@@ -138,12 +143,17 @@
                     {
                         "id": 1,
                         "name": "رادین خیام",
-                        "description": "قهرمان مسابقات بین الملی"
+                        "description": "قهرمان مسابقات داخلی"
                     },
                     {
                         "id": 2,
-                        "name": "رندوم",
-                        "description": "قهرمان استانی"
+                        "name": "نیلیا نقیبی",
+                        "description": "دارنده مقام اول در مسابقات کشوری"
+                    },
+                    {
+                        "id": 3,
+                        "name": "شقایق شهریاری",
+                        "description": "نایب قهرمان لیگ بزرگسالان"
                     }
                 ]
             }

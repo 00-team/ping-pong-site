@@ -20,6 +20,8 @@ import videoFile from '../../static/videos/students.mp4'
 
 // images
 import s1 from '../../static/img/students/s1.jpg'
+import s2 from '../../static/img/students/s2.jpg'
+import s3 from '../../static/img/students/s3.jpg'
 
 const Students = () => {
     const studentContainer = useRef(null)
@@ -34,8 +36,13 @@ const Students = () => {
         },
         {
             id: 2,
-            img: 'https://cdn.discordapp.com/attachments/731174051170746500/808355617441710130/mars-planet-vector-13949696.jpg',
+            img: s2,
             year: 2021,
+        },
+        {
+            id: 3,
+            img: s3,
+            year: 2020,
         },
     ])
 
