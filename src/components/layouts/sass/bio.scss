@@ -40,7 +40,6 @@ $disc_mobile: 15px;
         min-width: 1500px;
         margin: 2rem 10rem;
         padding: 2rem;
-        border-bottom: 10px;
         box-shadow: 0 6px 20px rgb(0 0 0 / 30%);
 
         .table_img {
@@ -63,5 +62,13 @@ $disc_mobile: 15px;
                 float: none;
             }
         }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
