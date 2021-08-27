@@ -1,45 +1,61 @@
 import React, { useState } from 'react'
-import { SliderData } from './SliderData'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 
-const StudentSlider = ({ slides }) => {
-    const [current, setCurrent] = useState(0)
-    const length = slides.length
+// icons 
+import { FcPrevious, FcNext } from 'react-icons/fc'
+
+// styling 
+import './scss/studentslider.scss'
+
+//imgs
+import radin from '../../static/students/radin.jpg'
+import nilia from '../../static/students/nilia.jpg'
+import shaghayegh from '../../static/students/shaghayegh.jpg'
+
+
+const images = [
+    {
+        img: radin,
+        discription: ' رادین خیام قهرمان کشور و دارنده رنکینگ جهانی',
+        id: 1,
+    },
+    {
+        img: nilia,
+        discription: 'نیلیا نقیبی دارنده مقام اول در مسابقات کشوری',
+        id: 2,
+    },
+    {
+        img: shaghayegh,
+        discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
+        id: 3,
+    },
+]
+
+function StudentSlider() {
+
+    const [slideIndex, setSlideIndex] = useState(1)
 
     const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1)
+        if (slideIndex === images.length - 1) {
+            setSlideIndex(0)
+        } else {
+            setSlideIndex(slideIndex + 1)
+        }
     }
 
     const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1)
-    }
-
-    if (!Array.isArray(slides) || slides.length <= 0) {
-        return null
+        console.log(slideIndex, images.length)
+        if (slideIndex !== 0) {
+            setSlideIndex(slideIndex - 1)
+        } else if (slideIndex === 0) {
+            setSlideIndex(images.length - 1)
+        }
     }
 
     return (
-        <section className='slider'>
-            <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-            <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide}/>
-            {SliderData.map((slide, index) => {
-                return (
-                    <div
-                        className={index === current ? 'slide active' : 'slide'}
-                        key={index}
-                    >
-                        {index === current && (
-                            <video
-                                src={slide.video}
-                                controls
-                                // alt='travel image'
-                                className='image'
-                            />
-                        )}
-                    </div>
-                )
-            })}
-        </section>
+        <div className="slider">
+            <div className="btns prev"> <FcPrevious size={60} onClick={prevSlide}/> </div>
+            <div className="btns next"> <FcNext     size={60} onClick={nextSlide}/> </div>
+        </div>
     )
 }
 
