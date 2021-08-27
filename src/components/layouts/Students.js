@@ -37,16 +37,18 @@ const Students = props => {
     const [slideIndex, setSlideIndex] = useState(1)
 
     const nextSlide = () => {
-        console.log(slideIndex,images.length)
-        if (slideIndex !== images.length) {
+        console.log(slideIndex, images.length)
+
+        if (slideIndex ===  images.length - 1) {
+            setSlideIndex(0)
+        } else {
             setSlideIndex(slideIndex + 1)
-        } else if (slideIndex === images.length) {
-            setSlideIndex(1)
         }
+        
     }
     
     const prevSlide = () => {
-        console.log(slideIndex,images.length)
+        // console.log(slideIndex,images.length)
         if (slideIndex !== 0) {
             setSlideIndex(slideIndex - 1)
         } else if (slideIndex === 0) {
