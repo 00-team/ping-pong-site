@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 
-// icons 
+// icons
 import { FcPrevious, FcNext } from 'react-icons/fc'
 
-// styling 
+// styling
 import './scss/studentslider.scss'
 
 //imgs
 import radin from '../../static/students/radin.jpg'
 import nilia from '../../static/students/nilia.jpg'
 import shaghayegh from '../../static/students/shaghayegh.jpg'
-
 
 const images = [
     {
@@ -31,7 +30,6 @@ const images = [
 ]
 
 function StudentSlider() {
-
     const [slideIndex, setSlideIndex] = useState(1)
 
     const nextSlide = () => {
@@ -52,9 +50,27 @@ function StudentSlider() {
     }
 
     return (
-        <div className="slider">
-            <div className="btns prev"> <FcPrevious size={60} onClick={prevSlide}/> </div>
-            <div className="btns next"> <FcNext     size={60} onClick={nextSlide}/> </div>
+        <div className='slider'>
+            <div className='btns prev'>
+                {' '}
+                <FcPrevious size={60} onClick={prevSlide} />{' '}
+            </div>
+            <div className='btns next'>
+                {' '}
+                <FcNext size={60} onClick={nextSlide} />{' '}
+            </div>
+            <div className='container' >
+                {images.map((obj, index) => {
+                    return (
+                        <div className='card' key={index}>
+                            <img className='img' src={obj.img} alt='' />
+                            <div className='discription fa'>
+                                <h5>{obj.discription}</h5>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

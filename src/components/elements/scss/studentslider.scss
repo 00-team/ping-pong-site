@@ -1,5 +1,4 @@
 .slider {
-
     margin: 3rem;
 
     transition: translateX ease-in-out 0.4s;
@@ -22,6 +21,7 @@
         width: 40%;
         // transform: translateX(-65px);
     }
+
     .btns {
         position: absolute;
         top: 50%;
@@ -32,5 +32,52 @@
         &.next {
             right: 0;
         }
+    }
+
+    .container {
+        // min-width: 800px;
+        width: 50%;
+        .card {
+            position: relative;
+            border-radius: 30px 30px;
+            overflow: hidden;
+            width: 50%;
+
+            .img {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+            .discription {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                background: linear-gradient(
+                    to right,
+                    #3c3b3f,
+                    rgb(60, 59, 63, 0.3),
+                    #3c3b3f
+                );
+                transition: opacity 0.4s ease-in-out;
+                padding: 10px 15px 15px;
+            }
+            &:hover .discription {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .discription{
+        width: 100%;
+        height: 100%;
+    }
+    .card:focus .discription {
+        opacity: 1;
     }
 }
