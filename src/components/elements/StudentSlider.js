@@ -27,16 +27,6 @@ const images = [
         discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
         id: 3,
     },
-    {
-        img: 'https://cdn.discordapp.com/attachments/731174051170746500/840946150852001792/zz.png',
-        discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
-        id: 4,
-    },
-    {
-        img: 'https://cdn.discordapp.com/attachments/731174051170746500/772103695013249094/hmm1.png',
-        discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
-        id: 5,
-    },
 ]
 
 function StudentSlider() {
@@ -59,6 +49,7 @@ function StudentSlider() {
     }
 
     const getYourClass = index => {
+        console.log(slideIndex,index)
         if (index === slideIndex) return ' current'
         else if (
             index === slideIndex + 1 ||
@@ -72,6 +63,10 @@ function StudentSlider() {
             return ' previous'
         else return ''
     }
+
+    // const interval = setInterval(() => {
+    //     nextSlide();
+    // }, 2000);
 
     return (
         <div className='slider'>
