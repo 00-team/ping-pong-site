@@ -97,6 +97,6 @@
     .hero-container video{
         position: absolute;
         top: 0;
-        height: auto;
+        height: inherit;
     }
 }
