@@ -8,6 +8,13 @@ $disc_mobile: 15px;
 .bio {
     padding: 3rem;
 
+    .bio-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     h1 {
         margin-bottom: 2rem;
         position: relative;
@@ -37,14 +44,15 @@ $disc_mobile: 15px;
         flex-direction: row-reverse;
         border-radius: 20px;
         background: snow;
-        min-width: 1500px;
-        margin: 2rem 10rem;
+        // min-width: 1500px;
+        margin: 2rem;
         padding: 2rem;
         box-shadow: 0 6px 20px rgb(0 0 0 / 30%);
 
         .table_img {
-            float: left;
+            // float: left;
             padding-right: 2rem;
+            object-fit: contain;
         }
     }
     @media only screen and (max-width: 1200px) {
