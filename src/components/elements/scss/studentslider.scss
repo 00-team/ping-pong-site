@@ -33,6 +33,35 @@
         &.next {
             right: 0;
         }
+        @media only screen and (max-width: 960px) {
+            & {
+                top: 30%;
+            }
+            &.prev {
+                left: -15%;
+            }
+            &.next {
+                right: -15%;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            & {
+                top: 30%;
+            }
+            &.prev {
+                left: -15%;
+            }
+            &.next {
+                right: -15%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        & {
+            margin: 0;
+            padding: 3rem;
+        }
     }
 
     .container {
@@ -40,13 +69,13 @@
         width: 80%;
         display: flex;
         justify-content: center;
-        height: 500px;
+        height: 51.5vh;
         margin: 0 auto;
 
         .card-slide {
             position: absolute;
-            width: 80%;
-            height: 500px;
+            width: 50%;
+            height: 100%;
             flex-shrink: 0;
             border-radius: 30px 30px;
             overflow: hidden;
@@ -55,7 +84,7 @@
 
             .overlay {
                 position: absolute;
-                opacity: .7;
+                opacity: 0.7;
                 background-color: #000;
                 width: 100%;
                 height: 100%;
@@ -97,6 +126,13 @@
                     opacity: 0;
                 }
             }
+
+            @media only screen and (max-width: 1024px) {
+                & {
+                    width: 70vw;
+                    height: 50%;
+                }
+            }
         }
 
         .card {
@@ -117,7 +153,7 @@
                 width: 100%;
                 text-align: center;
                 opacity: 0;
-                color: #FFF;
+                color: #fff;
                 background: linear-gradient(
                     to right,
                     #3c3b3f,
@@ -132,10 +168,6 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .discription {
-        width: 100%;
-        height: 100%;
-    }
     .card:focus .discription {
         opacity: 1;
     }
