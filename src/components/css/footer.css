@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
 .footer-container {
     background-color: #242424;
     padding: 2rem 0 2rem 0;
@@ -134,16 +136,20 @@
 }
 
 .social-logo {
-    font-family: monospace;
     color: #fff;
     justify-self: start;
     margin-left: 20px;
-    cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
+    /* justify-content:; */
     margin-bottom: 16px;
+}
+
+.social-logo .team_00 {
+    font-family: 'Graduate', cursive;
+    margin: 0 1rem;
 }
 
 .website-rights {
@@ -169,6 +175,12 @@
     }
 
     .social-media-wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .social-logo {
         flex-direction: column;
     }
 }
