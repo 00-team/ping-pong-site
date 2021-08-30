@@ -17,7 +17,8 @@ function Footer() {
                     <div className='social-media-wrap'>
                         <div className='footer-logo'>
                             <div className='social-logo'>
-                                Created By : 00 Team
+                                <div> Created By :</div>
+                                <div className='team_00'> 00 Team </div>
                             </div>
                         </div>
                         <div className='website-rights'>© 2021</div>
