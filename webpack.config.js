@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/App.js',
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         clean: true,
         sourceMapFilename: 'SourceMaps/[file].map'
     },
@@ -44,7 +44,7 @@ module.exports = {
             }
         }),
     ],
-    devtool: 'source-map',
+    // devtool: 'source-map',
     devServer: {
         port: 8000
     },
