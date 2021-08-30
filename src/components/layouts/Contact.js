@@ -66,7 +66,7 @@ const Contact = () => {
                                         window.open('https://wa.me/9367269167')
                                     }
                                 >
-                                    <div className='tooltip'>9367269167</div>
+                                    <div className='tooltip'>09367269167</div>
                                     <FaWhatsapp className='fab' />
                                 </button>
                             </li>
