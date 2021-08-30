@@ -21,7 +21,6 @@ const App = () => {
     const dispatch = useDispatch()
     const currentLocale = useSelector(state => state.Locale.locale)
     
-    console.log(currentLocale);
 
     
     return (

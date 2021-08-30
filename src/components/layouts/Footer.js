@@ -16,12 +16,11 @@ function Footer() {
                 <section className='social-media'>
                     <div className='social-media-wrap'>
                         <div className='footer-logo'>
-                            <Link to='/' className='social-logo'>
+                            <div className='social-logo'>
                                 Created By : 00 Team
-                                <i className='fab fa-typo3' />
-                            </Link>
+                            </div>
                         </div>
-                        <small className='website-rights'>© 2021</small>
+                        <div className='website-rights'>© 2021</div>
                         <div className='team' id='team'>
                             <a
                                 className='social-icon-link facebook'
@@ -31,14 +30,6 @@ function Footer() {
                             >
                                 <FaGithubSquare />
                             </a>
-                            <Link
-                                className='social-icon-link instagram'
-                                to='/'
-                                target='_blank'
-                                aria-label='Instagram'
-                            >
-                                <i className='fab fa-instagram' />
-                            </Link>
                         </div>
                     </div>
                 </section>

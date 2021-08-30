@@ -49,7 +49,6 @@ function StudentSlider() {
     }
 
     const getYourClass = index => {
-        console.log(slideIndex,index)
         if (index === slideIndex) return ' current'
         else if (
             index === slideIndex + 1 ||

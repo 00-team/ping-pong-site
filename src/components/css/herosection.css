@@ -1,4 +1,4 @@
-:root{  
+:root {
     --heading: 100px;
     --disc: 50px;
     --heading_moblie: 60px;
@@ -35,7 +35,6 @@
     margin-top: 8px;
     color: #fff;
     font-size: var(--disc);
-
 }
 
 .hero-btns {
@@ -56,10 +55,7 @@
     margin-left: 4px;
 }
 
-
-
 @media screen and (max-width: 768px) {
-    
     .hero-container > h1 {
         font-size: var(--disc_moblie);
         margin-top: -100px;
@@ -83,7 +79,7 @@
 }
 
 @media screen and (max-width: 960px) {
-    .hero-btns{
+    .hero-btns {
         flex-direction: row;
     }
     .hero-container > h1 {
@@ -91,10 +87,10 @@
         margin-top: -150px;
     }
 
-    .hero-container{
+    .hero-container {
         height: 30vh;
     }
-    .hero-container video{
+    .hero-container video {
         position: absolute;
         top: 0;
         height: inherit;
