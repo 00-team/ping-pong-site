@@ -45,8 +45,15 @@ const Contact = () => {
 
                             <li className='social__item'>
                                 <button className='social-btn telegram'>
-                                    <div className='tooltip'>
-                                        @MahmodRizband
+                                    <div
+                                        className='tooltip'
+                                        onClick={e =>
+                                            window.open(
+                                                'https://t.me/9367269167'
+                                            )
+                                        }
+                                    >
+                                        09367269167
                                     </div>
                                     <FaTelegramPlane className='fab' />
                                 </button>
@@ -56,10 +63,10 @@ const Contact = () => {
                                 <button
                                     className='social-btn whatsapp'
                                     onClick={e =>
-                                        window.open('https://wa.me/09120974956')
+                                        window.open('https://wa.me/9367269167')
                                     }
                                 >
-                                    <div className='tooltip'>09120974956</div>
+                                    <div className='tooltip'>9367269167</div>
                                     <FaWhatsapp className='fab' />
                                 </button>
                             </li>
