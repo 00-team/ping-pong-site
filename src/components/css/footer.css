@@ -150,11 +150,13 @@
 .social-logo .team_00 {
     font-family: 'Graduate', cursive;
     margin: 0 1rem;
+    cursor: pointer;
 }
 
 .website-rights {
     color: #fff;
     margin-bottom: 16px;
+    font-family: 20px;
 }
 
 @media screen and (max-width: 820px) {

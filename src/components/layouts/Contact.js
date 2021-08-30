@@ -49,11 +49,11 @@ const Contact = () => {
                                         className='tooltip'
                                         onClick={e =>
                                             window.open(
-                                                'https://t.me/9367269167'
+                                                'https://t.me/mahmoud_rizband'
                                             )
                                         }
                                     >
-                                        09367269167
+                                        @mahmoud_rizband
                                     </div>
                                     <FaTelegramPlane className='fab' />
                                 </button>
@@ -63,7 +63,7 @@ const Contact = () => {
                                 <button
                                     className='social-btn whatsapp'
                                     onClick={e =>
-                                        window.open('https://wa.me/9367269167')
+                                        window.open('https://wa.me/+989367269167')
                                     }
                                 >
                                     <div className='tooltip'>09367269167</div>
@@ -76,6 +76,10 @@ const Contact = () => {
                                     <div className='tooltip'>
                                         MahmodRizband@gmail.com
                                     </div>
+                                    <a
+                                        href='mailto:mahmodrizband@gmail.com'
+                                        target='_blank'
+                                    ></a>
                                     <CgMail className='fab' />
                                 </button>
                             </li>

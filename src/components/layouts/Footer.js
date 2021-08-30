@@ -1,13 +1,14 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom';
-// icons 
+import { Link } from 'react-router-dom'
+// icons
 
-import { FaGithubSquare, FaTelegram } from "react-icons/fa";
+import { FaGithubSquare, FaTelegram } from 'react-icons/fa'
 
+// css
+import '../css/footer.css'
 
-// css 
-import "../css/footer.css";
+const go = path => window.open(path)
 
 function Footer() {
     return (
@@ -17,12 +18,36 @@ function Footer() {
                     <div className='social-media-wrap'>
                         <div className='footer-logo'>
                             <div className='social-logo'>
-                                <div> Created By :</div>
-                                <div className='team_00'> 00 Team </div>
+                                <div
+                                    style={{
+                                        fontFamily:
+                                            "'Caveat', 'Roboto', cursive, sans-serif",
+                                    }}
+                                >
+                                    {' '}
+                                    Created By :
+                                </div>
+                                <div
+                                    className='team_00'
+                                    onClick={() =>
+                                        go('https://github.com/00-team')
+                                    }
+                                >
+                                    {' '}
+                                    00 Team{' '}
+                                </div>
                             </div>
                         </div>
-                        <div className='website-rights'>© 2021</div>
-                        <div className='team' id='team'>
+                        <div
+                            className='website-rights'
+                            style={{
+                                fontSize: '20px',
+                                fontFamily: "'Georama', 'Vazir', sans-serif",
+                            }}
+                        >
+                            Copyright © 2021
+                        </div>
+                        {/* <div className='team' id='team'>
                             <a
                                 className='social-icon-link facebook'
                                 href='https://github.com/00-team'
@@ -31,7 +56,7 @@ function Footer() {
                             >
                                 <FaGithubSquare />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </div>
