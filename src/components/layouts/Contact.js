@@ -62,9 +62,7 @@ const Contact = () => {
                             <li className='social__item'>
                                 <button
                                     className='social-btn whatsapp'
-                                    onClick={e =>
-                                        window.open('https://wa.me/+989367269167')
-                                    }
+                                    
                                 >
                                     <div className='tooltip'>09367269167</div>
                                     <FaWhatsapp className='fab' />
