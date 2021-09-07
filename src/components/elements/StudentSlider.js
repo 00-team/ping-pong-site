@@ -10,6 +10,7 @@ import './scss/studentslider.scss'
 import radin from '../../static/students/radin.jpg'
 import nilia from '../../static/students/nilia.jpg'
 import shaghayegh from '../../static/students/shaghayegh.jpg'
+import parsa from '../../static/students/parsa.jpg'
 
 const images = [
     {
@@ -25,6 +26,11 @@ const images = [
     {
         img: shaghayegh,
         discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
+        id: 3,
+    },
+    {
+        img: parsa,
+        discription: 'پارسا خلیلی قهرمان نونهالان کشور و دارنده مقام در نوجوانان و جوانان ',
         id: 3,
     },
 ]

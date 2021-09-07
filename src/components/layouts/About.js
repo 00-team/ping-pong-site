@@ -9,17 +9,18 @@ import locales from '../../locale.json'
 // style
 import './sass/about.scss'
 
-// glories 
+// glories
 import Glories from './Glories'
 
-
-// lower imgs 
+// lower imgs
 import lower1 from '../../static/img/lower-1.jpg'
 import lower2 from '../../static/img/lower-2.jpg'
 import lower3 from '../../static/img/lower-3.jpg'
 import lower4 from '../../static/img/lower-4.jpg'
 import lower5 from '../../static/img/lower-5.jpg'
 import lower6 from '../../static/img/lower-6.jpg'
+import lower7 from '../../static/img/lower-7.jpg'
+import lower8 from '../../static/img/lower-8.jpg'
 
 const About = () => {
     const currentLocale = useSelector(state => state.Locale.locale)
@@ -29,7 +30,7 @@ const About = () => {
         // setLocale()
         locales.map(l => {
             if (l.locale === currentLocale) {
-                setLocale({...l.text.about, direction: l.direction})
+                setLocale({ ...l.text.about, direction: l.direction })
             }
         })
     }, [currentLocale])
@@ -56,7 +57,7 @@ const About = () => {
 
                             <Glories
                                 src={lower2}
-                                text=' مدرک مربیگری سطح یک جهان '
+                                text=' کلاس های مربیگری سطح یک جهان '
                                 label='2001'
                                 path='/'
                             />
@@ -89,6 +90,18 @@ const About = () => {
                                 label='2015'
                                 path='/'
                             />
+                            <Glories
+                                src={lower7}
+                                text='مسابقات انتخابی تیم ملی جوانان'
+                                label='2015'
+                                path='/'
+                            />
+                            <Glories
+                                src={lower8}
+                                text='دعوت از محمود ریز بند به عنوان مسئول استعدادیابی استان تهران'
+                                label='2015'
+                                path='/'
+                            />
                         </ul>
                     </div>
                 </div>
@@ -97,4 +110,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default About
