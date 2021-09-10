@@ -164,11 +164,10 @@
                 padding: 10px 15px 15px;
             }
         }
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .card:focus .discription {
-        opacity: 1;
+        @media only screen and (max-width: 1200px) {
+            .card-slide.current .discription {
+                opacity: 1;
+            }
+        }
     }
 }
