@@ -21,6 +21,8 @@ import lower5 from '../../static/img/lower-5.jpg'
 import lower6 from '../../static/img/lower-6.jpg'
 import lower7 from '../../static/img/lower-7.jpg'
 import lower8 from '../../static/img/lower-8.jpg'
+import lower9 from '../../static/img/lower-9.jpg'
+import lower10 from '../../static/img/lower-10.jpg'
 
 const About = () => {
     const currentLocale = useSelector(state => state.Locale.locale)
@@ -38,15 +40,15 @@ const About = () => {
     return (
         <div className='about'>
             <div className='cards'>
-                <h1
-                    className='fa center'
-                    id='glories'
-                    style={{ textAlign: 'center' }}
-                >
-                    افتخارات
-                </h1>
                 <div className='cards__container'>
                     <div className='cards__wrapper'>
+                        <h1
+                            className='fa center'
+                            id='glories'
+                            style={{ textAlign: 'center' }}
+                        >
+                            مسابقات | مدارک
+                        </h1>
                         <ul className='cards__items'>
                             <Glories
                                 src={lower1}
@@ -90,15 +92,31 @@ const About = () => {
                                 label='2015'
                                 path='/'
                             />
+
                             <Glories
                                 src={lower7}
-                                text='مسابقات انتخابی تیم ملی جوانان'
+                                text='مربیگری تیم ملی جام فجر'
                                 label='2015'
                                 path='/'
                             />
+
                             <Glories
                                 src={lower8}
                                 text='دعوت از محمود ریز بند به عنوان مسئول استعدادیابی استان تهران'
+                                label='2015'
+                                path='/'
+                            />
+
+                            <Glories
+                                src={lower9}
+                                text='مدرک لول وان سطح جهانی محمود ریزبند'
+                                label='2015'
+                                path='/'
+                            />
+
+                            <Glories
+                                src={lower10}
+                                text='رزومه ورزشی محمود رضا ریزبند از طرف فدراسیون'
                                 label='2015'
                                 path='/'
                             />
