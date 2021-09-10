@@ -11,6 +11,8 @@ import radin from '../../static/students/radin.jpg'
 import nilia from '../../static/students/nilia.jpg'
 import shaghayegh from '../../static/students/shaghayegh.jpg'
 import parsa from '../../static/students/parsa.jpg'
+import mahan from '../../static/students/mahan.jpg'
+import samadi from '../../static/students/samadi.jpg'
 
 const images = [
     {
@@ -30,7 +32,18 @@ const images = [
     },
     {
         img: parsa,
-        discription: 'پارسا خلیلی قهرمان نونهالان کشور و دارنده مقام در نوجوانان و جوانان ',
+        discription:
+            'پارسا خلیلی قهرمان نونهالان کشور و دارنده مقام در نوجوانان و جوانان ',
+        id: 3,
+    },
+    {
+        img: mahan,
+        discription: 'ماهان ترک زبان مقام دار استان تهران',
+        id: 3,
+    },
+    {
+        img: samadi,
+        discription: 'محمد امین صمدی قهرمان نونهالان،نوجونان و جوانان کشور',
         id: 3,
     },
 ]
