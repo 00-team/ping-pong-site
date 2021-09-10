@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 // icons
 import { FaWhatsapp, FaInstagramSquare, FaTelegramPlane } from 'react-icons/fa'
 import { AiOutlineInstagram } from 'react-icons/ai'
+import { BiPhoneCall } from 'react-icons/bi'
 import { SiGmail } from 'react-icons/si'
 import { CgMail } from 'react-icons/cg'
 
@@ -60,10 +61,14 @@ const Contact = () => {
                             </li>
 
                             <li className='social__item'>
-                                <button
-                                    className='social-btn whatsapp'
-                                    
-                                >
+                                <button className='social-btn phone'>
+                                    <div className='tooltip'>09367269167</div>
+                                    <BiPhoneCall className='fab' />
+                                </button>
+                            </li>
+
+                            <li className='social__item'>
+                                <button className='social-btn whatsapp'>
                                     <div className='tooltip'>09367269167</div>
                                     <FaWhatsapp className='fab' />
                                 </button>

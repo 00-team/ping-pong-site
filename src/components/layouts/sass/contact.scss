@@ -122,6 +122,12 @@ $disc_mobile: 12px;
             background: #f99257;
         }
 
+        .phone:hover span,
+        .phone:hover .tooltip,
+        .phone:hover .tooltip:before {
+            background: #636363;
+        }
+
         .whatsapp:hover span,
         .whatsapp:hover .tooltip,
         .whatsapp:hover .tooltip:before {
@@ -283,6 +289,22 @@ $disc_mobile: 12px;
                         rgba(#000, 0.15)
                     ),
                     #08a0e9;
+            }
+            &::after {
+                filter: blur(9px);
+                background: radial-gradient(#fff 20%, #08a0e9 50%);
+                box-shadow: 0 0 10px rgba(#08a0e9, 1);
+            }
+        }
+
+        &.phone {
+            &::before {
+                background: linear-gradient(
+                        to bottom,
+                        rgb(36, 36, 36),
+                        rgba(#000, 0.15)
+                    ),
+                    #242424;
             }
             &::after {
                 filter: blur(9px);
