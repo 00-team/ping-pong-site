@@ -6,7 +6,7 @@ import video from '../../static/vid/hero.mp4'
 // elements
 import { Button } from '../elements/Button'
 
-// css 
+// css
 import '../css/herosection.css'
 
 function HeroSection() {
@@ -41,7 +41,7 @@ function HeroSection() {
                     buttonStyle='btn--outline'
                     buttonSize='btn--large'
                 >
-                    افتخارات
+                    معرفی
                 </Button>
             </div>
         </div>
