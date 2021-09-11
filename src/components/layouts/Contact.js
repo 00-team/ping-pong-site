@@ -62,14 +62,14 @@ const Contact = () => {
 
                             <li className='social__item'>
                                 <button className='social-btn phone'>
-                                    <div className='tooltip'>09367269167</div>
+                                    <div className='tooltip'>09387269167</div>
                                     <BiPhoneCall className='fab' />
                                 </button>
                             </li>
 
                             <li className='social__item'>
                                 <button className='social-btn whatsapp'>
-                                    <div className='tooltip'>09367269167</div>
+                                    <div className='tooltip'>09387269167</div>
                                     <FaWhatsapp className='fab' />
                                 </button>
                             </li>
@@ -77,7 +77,7 @@ const Contact = () => {
                             <li className='social__item'>
                                 <button className='social-btn gmail'>
                                     <div className='tooltip'>
-                                        MahmodRizband@gmail.com
+                                        mahmoodrizband@gmail.com
                                     </div>
                                     <a
                                         href='mailto:mahmodrizband@gmail.com'
