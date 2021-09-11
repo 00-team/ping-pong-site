@@ -33,7 +33,7 @@ const Contact = () => {
                             <li className='social__item'>
                                 <button className='social-btn instagram'>
                                     <div className='tooltip'>
-                                        @MahmodRizband
+                                        @mahmoodrezarizband25
                                     </div>
                                     <a
                                         href='https://www.instagram.com/mahmoodrezarizband25/'
