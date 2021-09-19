@@ -52,6 +52,7 @@ const About = () => {
                         <ul className='cards__items'>
                             <Glories
                                 src={lower1}
+                                alt='لیگ کشوری پینگ پنگ'
                                 text=' قهرمانی لیگ کشوری، محمود ریزبند به عنوان کاپیتان تیم ، بازیکن و مربی تیم'
                                 label='2005'
                                 path='/'
@@ -59,6 +60,7 @@ const About = () => {
 
                             <Glories
                                 src={lower2}
+                                alt='مربیگری پینگ پنگ'
                                 text=' کلاس های مربیگری سطح یک جهان '
                                 label='2001'
                                 path='/'
@@ -67,6 +69,7 @@ const About = () => {
                         <ul className='cards__items' id='grid'>
                             <Glories
                                 src={lower3}
+                                alt='قهرمانی کشوری پینگ پنگ'
                                 text=' قهرمانی نونهالان کشور، محمود ریزبد مربی تیم'
                                 label='2018'
                                 path='/'
@@ -74,6 +77,7 @@ const About = () => {
 
                             <Glories
                                 src={lower4}
+                                alt='لیگ کشوری ترکیه پینگ پنگ'
                                 text='شرکت در لیگ کشور ترکیه'
                                 label='2018'
                                 path='/'
@@ -81,6 +85,7 @@ const About = () => {
 
                             <Glories
                                 src={lower5}
+                                alt='محمود ریزبند تیم ملی نوجوانان پینگ پنگ'
                                 text='انتخابی تیم ملی نوجوانان، محمود ریزبند مربی تیم تهران'
                                 label='1980'
                                 path='/'
@@ -88,6 +93,7 @@ const About = () => {
 
                             <Glories
                                 src={lower6}
+                                alt='رادین خیام محمود ریز بند پینگ پنگ'
                                 text=' مقام نایب قهزمانی توسط رادین خیام یکی از شاگردان محمود ریزبند'
                                 label='2015'
                                 path='/'
@@ -95,6 +101,7 @@ const About = () => {
 
                             <Glories
                                 src={lower7}
+                                alt='مربی مربیگری تیم ملی'
                                 text='مربیگری تیم ملی جام فجر'
                                 label='2015'
                                 path='/'
@@ -102,6 +109,7 @@ const About = () => {
 
                             <Glories
                                 src={lower8}
+                                alt='محمود ریزند پینگ پنگ استعدادیابی استعداد'
                                 text='دعوت از محمود ریز بند به عنوان مسئول استعدادیابی استان تهران'
                                 label='2015'
                                 path='/'
@@ -109,6 +117,7 @@ const About = () => {
 
                             <Glories
                                 src={lower9}
+                                alt='مدرک پینگ پنگ جهانی مربیگری مربی'
                                 text='مدرک لول وان سطح جهانی محمود ریزبند'
                                 label='2015'
                                 path='/'
@@ -116,6 +125,7 @@ const About = () => {
 
                             <Glories
                                 src={lower10}
+                                alt='رزومه پینگ پنگ فدراسیون تهران'
                                 text='رزومه ورزشی محمود رضا ریزبند از طرف فدراسیون'
                                 label='2015'
                                 path='/'
