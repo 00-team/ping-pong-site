@@ -18,32 +18,38 @@ const images = [
     {
         img: radin,
         discription: ' رادین خیام قهرمان کشور و دارنده رنکینگ جهانی',
+        alt: ' رادین خیام قهرمان پینگ پنگ رنک مقام کشوری مسابقات',
         id: 1,
     },
     {
         img: nilia,
         discription: 'نیلیا نقیبی دارنده مقام اول در مسابقات کشوری',
+        alt: 'نیلیا نقیبی مسابقات کشوری پینگ پنگ مقام',
         id: 2,
     },
     {
         img: shaghayegh,
         discription: 'شقایق شهریاری نایب قهرمان لیگ بزرگسالان',
+        alt: 'پینگ پنگ بزرگسالان',
         id: 3,
     },
     {
         img: parsa,
         discription:
             'پارسا خلیلی قهرمان نونهالان کشور و دارنده مقام در نوجوانان و جوانان ',
+        alt: 'پارسا خلیلی پینگ پنگ',
         id: 3,
     },
     {
         img: mahan,
         discription: 'ماهان ترک زبان مقام دار استان تهران',
+        alt: 'پینگ پنگ تهران مقام',
         id: 3,
     },
     {
         img: samadi,
         discription: 'محمد امین صمدی قهرمان نونهالان،نوجونان و جوانان کشور',
+        alt: 'صمدی قهرمان نونهالان نوجوانان جوانان پینگ پنگ',
         id: 3,
     },
 ]
@@ -104,7 +110,7 @@ function StudentSlider() {
                         >
                             <div className='overlay'></div>
                             <div className={'card'}>
-                                <img className='img' src={obj.img} alt='' />
+                                <img className='img' src={obj.img} alt={obj.alt} />
                                 <div className='discription fa'>
                                     <h5>{obj.discription}</h5>
                                 </div>
