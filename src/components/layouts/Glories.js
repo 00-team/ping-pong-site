@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Glories = ({ label, src, text }) => {
+const Glories = ({ label, src, text,alt }) => {
     return (
         <>
             <li className='cards__item'>
@@ -12,8 +12,8 @@ const Glories = ({ label, src, text }) => {
                     >
                         <img
                             className='cards__item__img'
-                            alt='Travel Image'
                             src={src}
+                            alt={alt}
                         />
                     </figure>
                     <div className='cards__item__info'>
