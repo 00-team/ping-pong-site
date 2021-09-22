@@ -9,7 +9,7 @@ function Bio() {
     return (
         <div className='bio'>
             <div className='bio-wrapper'>
-                <h1 className='fa center'>زندگی نامه</h1>
+                <h1 className='fa center' id="bio">زندگی نامه</h1>
                 <div className='bio-container'>
                     <p className='fa'>
                         من پینگ پنگ رو از پارکهای تهران شروع کردم یک روز به
