@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import ReactDOM from 'react-dom'
 
 // router 
@@ -20,6 +20,12 @@ import './components/sass/base.scss'
 const App = () => {
     const dispatch = useDispatch()
     const currentLocale = useSelector(state => state.Locale.locale)
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+
+
+    useEffect(() => {
+        alert(isSafari)
+    }, [])
     
 
     
