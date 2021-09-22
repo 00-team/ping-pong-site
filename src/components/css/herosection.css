@@ -15,7 +15,6 @@
 }
 
 .hero-container {
-    /* background: url('http://localhost:8000/static/img/img-home.jpg') center center/cover no-repeat; */
     height: 100vh;
     width: 100%;
     display: flex;
@@ -24,6 +23,14 @@
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
+}
+
+.hero-container.img {
+    background: url('https://cdn.discordapp.com/attachments/755008264533704706/890225689662459974/hero.jpg')
+        center center/cover no-repeat;
+}
+.hero-container.img video {
+    display: none;
 }
 
 .hero-container > h1 {

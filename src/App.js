@@ -23,12 +23,6 @@ const App = () => {
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
 
-    useEffect(() => {
-        alert(isSafari)
-    }, [])
-    
-
-    
     return (
         <Router>
             {/* <Navbar /> */}
