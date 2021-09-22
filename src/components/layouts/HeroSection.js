@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect, useRef} from 'react'
 
 // video
 import video from '../../static/vid/hero.mp4'
@@ -10,9 +10,19 @@ import { Button } from '../elements/Button'
 import '../css/herosection.css'
 
 function HeroSection() {
+    const videoRef = useRef(null)
+
+    useEffect(() => {
+        onLoad();
+    }, [])
+
+    const onLoad = () =>{
+        videoRef.current.play()
+    }
+
     return (
         <div className='hero-container'>
-            <video className='hero' src={video} autoPlay loop muted />
+            <video className='hero' ref={videoRef} src={video} loop muted />
             <h1></h1>
             <p className='fa center first'>مسابقات جهانی بلاروس</p>
             <p className='fa center'>2016 </p>
