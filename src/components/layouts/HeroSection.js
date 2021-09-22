@@ -36,7 +36,7 @@ function HeroSection() {
                 </Button>
 
                 <Button
-                    link='#glories'
+                    link='#bio'
                     className='btns fa center'
                     buttonStyle='btn--outline'
                     buttonSize='btn--large'
