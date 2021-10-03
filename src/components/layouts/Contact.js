@@ -74,7 +74,7 @@ const Contact = () => {
                                 </button>
                             </li>
 
-                            <li className='social__item'>
+                            {/* <li className='social__item'>
                                 <button className='social-btn gmail'>
                                     <div className='tooltip'>
                                         mahmoodrizband@gmail.com
@@ -85,7 +85,7 @@ const Contact = () => {
                                     ></a>
                                     <CgMail className='fab' />
                                 </button>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
