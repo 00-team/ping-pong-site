@@ -94,13 +94,21 @@ function StudentSlider() {
 
     return (
         <div className='slider'>
-            <div className='btns prev'>
-                <FcPrevious size={60} onClick={prevSlide} />
-            </div>
-            <div className='btns next'>
-                <FcNext size={60} onClick={nextSlide} />
-            </div>
             <div className='container'>
+                <div className='btns'>
+                    <div className='next'>
+                        <FcPrevious size={60} onClick={prevSlide} />
+                    </div>
+                    <div className='prev'>
+                        <FcNext size={60} onClick={nextSlide} />
+                    </div>
+                </div>
+                {/* <div className='btns prev'>
+                    <FcPrevious size={60} onClick={prevSlide} />
+                </div>
+                <div className='btns next'>
+                    <FcNext size={60} onClick={nextSlide} />
+                </div> */}
                 {images.map((obj, index) => {
                     return (
                         <div
@@ -110,7 +118,11 @@ function StudentSlider() {
                         >
                             <div className='overlay'></div>
                             <div className={'card'}>
-                                <img className='img' src={obj.img} alt={obj.alt} />
+                                <img
+                                    className='img'
+                                    src={obj.img}
+                                    alt={obj.alt}
+                                />
                                 <div className='discription fa'>
                                     <h5>{obj.discription}</h5>
                                 </div>
