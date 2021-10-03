@@ -59,3 +59,16 @@
         font-size: var(--btn_mobile);
     }
 }
+@media screen and (max-width: 425px) {
+
+    .btn{
+        padding: 10px 5px;
+        min-width: 80px;
+    }
+    .btn--medium {
+        font-size: 9px;
+    }
+    .btn--large {
+        font-size: var(--btn_mobile);
+    }
+}
