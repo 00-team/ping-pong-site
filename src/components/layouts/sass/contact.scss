@@ -332,6 +332,23 @@ $disc_mobile: 12px;
 }
 @media only screen and (max-width: 1200px) {
     .social__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 20px;
+    }
+
+    .social-btn:focus .tooltip {
+        top: -70px;
+        z-index: 10;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .social__list {
+        display: flex;
         flex-direction: column;
     }
 
