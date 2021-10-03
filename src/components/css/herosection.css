@@ -33,6 +33,8 @@
     display: none;
 }
 
+
+
 .hero-container > h1 {
     color: #fff;
     margin-top: -100px;
@@ -101,5 +103,14 @@
         position: absolute;
         top: 0;
         height: inherit;
+    }
+}
+@media screen and (max-width: 320px) {
+    .hero-container {
+        background: url('https://cdn.discordapp.com/attachments/755008264533704706/890225689662459974/hero.jpg')
+            center center/cover no-repeat;
+    }
+    .hero-container video {
+        display: none;
     }
 }
