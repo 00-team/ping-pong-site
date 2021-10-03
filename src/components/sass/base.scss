@@ -18,10 +18,19 @@ $disc_mobile: 12px;
 }
 
 * {
-    user-select: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    user-select: none;
+    // user select for phones
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:focus {
         outline: none;
@@ -52,8 +61,7 @@ html {
 body {
     overflow-x: hidden;
     font-size: 10px;
-
-    background-image: url("../../static/img/bg.png");
+    background-image: url('../../static/img/bg.png');
     background-repeat: space;
 }
 
@@ -64,7 +72,6 @@ body {
 }
 
 .center {
-
     font-size: $heading2;
     text-align: center;
     font-family: 'Caveat', 'Vazir', cursive;
@@ -85,20 +92,20 @@ body {
     ::-webkit-scrollbar {
         display: none;
     }
-    .fa{
+    .fa {
         font-size: $disc_mobile;
     }
-    .center{
+    .center {
         font-size: $heading2_mobile;
     }
-    .topic{
+    .topic {
         background-color: #fff;
         font-size: 40px;
         padding: 3vh 0;
     }
 }
 @media screen and (max-width: 1280px) {
-    body{
+    body {
         background: #fff;
     }
 }
