@@ -51,6 +51,10 @@
             top: 50%;
 
             z-index: 10;
+
+            div {
+                cursor: pointer;
+            }
         }
 
         // .btns {
@@ -102,6 +106,7 @@
             overflow: hidden;
             transition: all 450ms ease 0s;
             visibility: hidden;
+            width: 75%;
 
             .overlay {
                 position: absolute;

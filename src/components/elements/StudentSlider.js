@@ -26,6 +26,7 @@ const images = [
         discription: 'نیلیا نقیبی دارنده مقام اول در مسابقات کشوری',
         alt: 'نیلیا نقیبی مسابقات کشوری پینگ پنگ مقام',
         id: 2,
+        imgStyle: { objectPosition: '0 -70px' },
     },
     {
         img: shaghayegh,
@@ -122,6 +123,7 @@ function StudentSlider() {
                                     className='img'
                                     src={obj.img}
                                     alt={obj.alt}
+                                    style={obj.imgStyle ? obj.imgStyle : {}}
                                 />
                                 <div className='discription fa'>
                                     <h5>{obj.discription}</h5>

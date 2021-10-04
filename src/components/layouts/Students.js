@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-
 // componenets
 import Glories from './Glories'
 import StudentSlider from '../elements/StudentSlider'
@@ -8,13 +7,8 @@ import StudentSlider from '../elements/StudentSlider'
 // css
 import './sass/students.scss'
 
-
-
 //
 const Students = props => {
-
-    
-    
     return (
         <div className='students'>
             <h1
