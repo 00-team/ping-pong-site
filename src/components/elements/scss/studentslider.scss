@@ -1,3 +1,5 @@
+@use '../../sass/media.scss' as *;
+
 .slider {
     display: flex;
     justify-content: center;
@@ -41,7 +43,15 @@
         justify-content: center;
         height: 51.5vh;
 
-        .btns{
+        @include media('<=550px') {
+            width: 100%;
+            .btns {
+                top: auto;
+                bottom: 0;
+            }
+        }
+
+        .btns {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -69,7 +79,7 @@
         //         right: 0;
         //     }
         //     @media only screen and (max-width: 960px) {
-                
+
         //         &.prev {
         //             left: -15%;
         //         }
@@ -78,7 +88,7 @@
         //         }
         //     }
         //     @media only screen and (max-width: 1024px) {
-                
+
         //         &.prev {
         //             left: -15%;
         //         }
@@ -87,7 +97,7 @@
         //         }
         //     }
         //     @media only screen and (max-width: 1440px) {
-                
+
         //         &.prev {
         //             left: -15%;
         //         }
